@@ -17,7 +17,7 @@ chapter: false
 
 &emsp; **University:** FPT University
 
-&emsp; **Major:** Information Technology
+&emsp; **Major:** Information Assurance
 
 &emsp; **Class:** AWS092026
 

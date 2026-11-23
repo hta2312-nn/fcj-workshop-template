@@ -1,31 +1,31 @@
 ---
 title: "Báo cáo thực tập"
-date: 2024-01-01
+date: 2026-09-14
 weight: 1
 chapter: false
 ---
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
+&emsp; **Họ và tên:** Tạ Minh Hoàng
 
-&emsp; **Số điện thoại:** 0989888999
+&emsp; **Số điện thoại:** 0799558079
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** thanhthao836363@gmail.com
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **Trường:** Đại Học FPT 
 
-&emsp; **Ngành:** Công nghệ thông tin
+&emsp; **Ngành:** An Toàn Thông Tin
 
-&emsp; **Lớp:** AWS082025
+&emsp; **Lớp:** AWS092026
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
+&emsp; **Thời gian thực tập:** Từ ngày 14/09/2025 đến ngày 20/12/2025
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![alt text](Avatar-1.png)
 
 
 
