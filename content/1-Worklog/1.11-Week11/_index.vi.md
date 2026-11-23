@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 11"
-date: 2024-01-01
-weight: 2
+date: 2026-11-29
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 11:
 
-### Mục tiêu tuần 11:
+- Hoàn thiện Proposal và Workshop với bảng ước tính từ AWS Pricing Calculator và cơ sở lý luận kiến trúc.
+- Viết và xuất bản các bài blog kỹ thuật dựa trên dự án.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Cập nhật Proposal: <br>&emsp; + Bổ sung sơ đồ kiến trúc, bảng dịch vụ kèm lý do lựa chọn và bảng rủi ro mở rộng <br>&emsp; + Bổ sung bảng ước tính AWS Pricing Calculator (Sydney, 10.000 requests/tháng) kèm đường dẫn và bảng tổng hợp <br> - Chỉnh sửa cách diễn đạt về chi phí trong phần Executive Summary, ROI và Expected Outcomes | 23/11/2026 | 23/11/2026 | AWS Pricing Calculator |
+| 3 | - Cập nhật Workshop: <br>&emsp; + Bổ sung phần đối chiếu Well-Architected, mục tối ưu hóa chi phí và bảng dự toán chi phí <br>&emsp; + Bổ sung minh chứng CloudWatch (logs, metrics, alarm) và kiểm tra khả năng tái lập của từng bước <br> - Khắc phục các điểm chưa nhất quán về Region, tên tài nguyên và ảnh chụp màn hình | 24/11/2026 | 24/11/2026 | AWS Docs: Well-Architected Framework |
+| 4 | - Viết Blog 1: Xây dựng trợ lý RAG serverless với Lambda, API Gateway và DynamoDB <br> - Trình bày kiến trúc, luồng dữ liệu và các quyết định thiết kế chính | 25/11/2026 | 25/11/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 5 | - Viết Blog 2: Ước tính chi phí AWS bằng Pricing Calculator <br> - Chia sẻ các bài học kinh nghiệm: <br>&emsp; + Nhầm lẫn đơn vị tính trong API Gateway <br>&emsp; + Chọn nhầm reserved capacity trong DynamoDB | 26/11/2026 | 26/11/2026 | AWS Pricing Calculator |
+| 6 | - Rà soát, biên tập cả hai bài blog và xuất bản lên AWS Study Group <br> - Thu thập phản hồi từ mentor và các thành viên cùng nhóm để ghi nhận các điểm cần cải thiện | 27/11/2026 | 27/11/2026 | <https://hcm-rules.awsfcaj.com/> |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Kết quả đạt được Tuần 11:
 
-
-### Kết quả đạt được tuần 11:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hoàn thiện Proposal với đầy đủ sơ đồ kiến trúc, lý do chọn dịch vụ, bảng rủi ro và dự toán từ AWS Pricing Calculator.
+- Hoàn thiện Workshop với phần đối chiếu Well-Architected, tối ưu hóa chi phí và minh chứng giám sát CloudWatch.
+- Nắm vững cách tránh các lỗi nhập liệu phổ biến trên AWS Pricing Calculator (đơn vị API Gateway và reserved capacity của DynamoDB).
+- Viết, biên tập và xuất bản thành công hai bài blog kỹ thuật lên AWS Study Group cùng việc tiếp thu góp ý từ mentor và đồng đội.

@@ -1,59 +1,29 @@
 ---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2026-11-22
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 10:
 
-### Mục tiêu tuần 10:
+- Xây dựng giao diện người dùng (frontend) và chạy kiểm thử toàn trình (end-to-end).
+- Hoàn thiện các tài liệu Proposal, Workshop và Worklog.
+- Dọn dẹp toàn bộ tài nguyên đã triển khai.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - **Thực hành:** <br>&emsp; + Xây dựng `index.html`: bố cục chat, tuyên bố miễn trừ trách nhiệm (disclaimer), status badge và thông báo lỗi <br>&emsp; + Gọi API bằng `fetch` | 16/11/2026 | 16/11/2026 | AWS Docs: API Gateway |
+| 3 | - **Thực hành:** <br>&emsp; + Tạo S3 bucket và bật tính năng static website hosting kèm public read-only bucket policy <br>&emsp; + Tải `index.html` lên, cấu hình API URL và kiểm thử end-to-end <br>&emsp; + Chụp ảnh màn hình và quay video demo | 17/11/2026 | 17/11/2026 | AWS Docs: S3 |
+| 4 | - Viết tài liệu Workshop: <br>&emsp; + Các bước hướng dẫn có thể tái lập (reproducible steps) <br>&emsp; + Lý do lựa chọn từng dịch vụ <br>&emsp; + Đối chiếu với Well-Architected Framework <br> - Che mờ account ID, keys và các URL nhạy cảm trong ảnh chụp màn hình | 18/11/2026 | 18/11/2026 | AWS Docs: Well-Architected Framework |
+| 5 | - Hoàn thiện Proposal và Workshop, đồng thời khắc phục các điểm chưa nhất quán như Region và tên tài nguyên <br> - Hoàn tất Worklog và rà soát các yêu cầu cho Self-Assessment và Blog | 19/11/2026 | 19/11/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 6 | - **Thực hành:** <br>&emsp; + Dọn dẹp tài nguyên theo thứ tự: S3 bucket, API Gateway, Lambda cùng log group, bảng DynamoDB, IAM role và policy, Groq API key <br>&emsp; + Kiểm tra Cost Explorer và Billing để xác nhận không phát sinh chi phí | 20/11/2026 | 20/11/2026 | AWS Docs: Cost Explorer and Billing |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Kết quả đạt được Tuần 10:
 
-
-### Kết quả đạt được tuần 10:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Xây dựng và triển khai thành công giao diện chat frontend (`index.html`) trên Amazon S3.
+- Hoàn tất kiểm thử end-to-end kèm bộ ảnh chụp màn hình và video demo.
+- Hoàn thiện và đồng bộ đầy đủ các tài liệu Proposal, Workshop và Worklog.
+- Dọn dẹp sạch sẽ toàn bộ tài nguyên theo đúng trình tự và xác nhận không phát sinh chi phí trên Cost Explorer và Billing.

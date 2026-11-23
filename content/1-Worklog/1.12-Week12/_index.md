@@ -1,57 +1,29 @@
 ---
 title: "Week 12 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-12-06
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 12 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Study the next improvements for security, retrieval, and monitoring.
+- Prepare the final demo and complete all internship deliverables.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Study AWS Systems Manager Parameter Store (`SecureString`) for storing the Groq API key <br> - Study API keys and usage plans, and restricting CORS to the website origin <br> - Study Amazon Cognito for adding authentication | 30/11/2026 | 30/11/2026 | AWS Docs: Systems Manager Parameter Store |
+| 3 | - Study Amazon Bedrock and Bedrock Knowledge Bases compared with keyword retrieval <br> - Study SNS email alerts and DynamoDB TTL for conversation history <br> - Write the future-work section for the Workshop | 01/12/2026 | 01/12/2026 | AWS Docs: Amazon Bedrock |
+| 4 | - Write Blog 3: security and cost lessons from the project: <br>&emsp; + Least privilege <br>&emsp; + Throttling <br>&emsp; + Prompt injection <br>&emsp; + API key handling <br> - Record the final demo video and prepare the presentation and Q&A | 02/12/2026 | 02/12/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 5 | - Complete the Self-Assessment <br> - Check the internship checklist: <br>&emsp; + Attendance <br>&emsp; + Events with check-in photos <br>&emsp; + Blogs and Worklog <br> - Ask a mentor to review the Proposal and the Workshop | 03/12/2026 | 03/12/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 6 | - Final check of all deliverables: <br>&emsp; + Worklog (Weeks 1–12) <br>&emsp; + Proposal & Workshop <br>&emsp; + Blog links & Self-Assessment <br> - Verify in Billing and Free Tier usage that no resources are still running | 04/12/2026 | 04/12/2026 | AWS Docs: Cost Explorer and Billing |
 
 ### Week 12 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Understood how to secure secrets (Parameter Store `SecureString`) and restrict API access (API keys, usage plans, CORS, and Amazon Cognito).
+- Understood options for improving retrieval (Amazon Bedrock & Knowledge Bases) and monitoring/storage (SNS email alerts, DynamoDB TTL), and documented them in the Workshop's future-work section.
+- Wrote and published the third technical blog post on security and cost lessons from the project.
+- Completed the final demo video, presentation, Self-Assessment, and mentor review.
+- Verified zero running resources in Billing/Free Tier and submitted all internship deliverables.

@@ -1,58 +1,29 @@
 ---
 title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
+date: 2026-12-06
+weight: 12
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-### Mục tiêu tuần 12:
+### Mục tiêu Tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Nghiên cứu các hướng cải tiến tiếp theo về bảo mật, truy xuất dữ liệu (retrieval) và giám sát (monitoring).
+- Chuẩn bị bản demo cuối cùng và hoàn thiện toàn bộ sản phẩm bàn giao của kỳ thực tập.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc cần triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu AWS Systems Manager Parameter Store (`SecureString`) để lưu trữ Groq API key <br> - Tìm hiểu về API keys, usage plans và giới hạn CORS theo đúng origin của website <br> - Tìm hiểu Amazon Cognito để bổ sung tính năng xác thực (authentication) | 30/11/2026 | 30/11/2026 | AWS Docs: Systems Manager Parameter Store |
+| 3 | - Tìm hiểu Amazon Bedrock và Bedrock Knowledge Bases, so sánh với phương pháp tìm kiếm theo từ khóa (keyword retrieval) <br> - Tìm hiểu cảnh báo qua email với SNS và DynamoDB TTL để quản lý lịch sử hội thoại <br> - Viết mục định hướng phát triển (future work) cho tài liệu Workshop | 01/12/2026 | 01/12/2026 | AWS Docs: Amazon Bedrock |
+| 4 | - Viết Blog 3: Bài học về bảo mật và chi phí từ dự án: <br>&emsp; + Nguyên tắc đặc quyền tối thiểu (least privilege) <br>&emsp; + Giới hạn lưu lượng (throttling) <br>&emsp; + Phòng chống prompt injection <br>&emsp; + Quản lý API key <br> - Quay video demo cuối cùng, chuẩn bị bài thuyết trình và phần hỏi đáp (Q&A) | 02/12/2026 | 02/12/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 5 | - Hoàn thành bài Tự đánh giá (Self-Assessment) <br> - Rà soát danh mục kiểm tra thực tập (checklist): <br>&emsp; + Điểm danh chuyên cần <br>&emsp; + Các sự kiện kèm ảnh check-in <br>&emsp; + Các bài blog và Worklog <br> - Nhờ mentor rà soát lại Proposal và Workshop | 03/12/2026 | 03/12/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 6 | - Kiểm tra lần cuối toàn bộ sản phẩm bàn giao: <br>&emsp; + Worklog (Tuần 1–12) <br>&emsp; + Proposal & Workshop <br>&emsp; + Đường dẫn các bài blog & Self-Assessment <br> - Kiểm tra mục Billing và Free Tier để xác nhận không còn tài nguyên nào đang chạy | 04/12/2026 | 04/12/2026 | AWS Docs: Cost Explorer and Billing |
 
+### Kết quả đạt được Tuần 12:
 
-### Kết quả đạt được tuần 12:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hiểu rõ cách bảo vệ thông tin nhạy cảm (Parameter Store `SecureString`) và kiểm soát truy cập API (API keys, usage plans, CORS, Amazon Cognito).
+- Nắm được các phương án nâng cấp khả năng truy xuất (Amazon Bedrock & Knowledge Bases) và giám sát/lưu trữ (SNS, DynamoDB TTL), đồng thời cập nhật vào mục định hướng phát triển của Workshop.
+- Hoàn thành và xuất bản bài blog kỹ thuật thứ 3 về các bài học bảo mật và tối ưu chi phí.
+- Hoàn thiện video demo cuối kỳ, bài thuyết trình, Self-Assessment và nhận đánh giá từ mentor.
+- Xác nhận không còn tài nguyên phát sinh chi phí trên Billing/Free Tier và hoàn tất nộp toàn bộ sản phẩm thực tập.

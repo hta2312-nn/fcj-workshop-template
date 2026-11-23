@@ -1,57 +1,29 @@
 ---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-11-22
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Build the frontend and run end-to-end tests.
+- Finalize the Proposal, Workshop, and Worklog.
+- Clean up all resources.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - **Practice:** <br>&emsp; + Build `index.html`: chat layout, disclaimer, status badge, and error messages <br>&emsp; + Call the API with `fetch` | 16/11/2026 | 16/11/2026 | AWS Docs: API Gateway |
+| 3 | - **Practice:** <br>&emsp; + Create the S3 bucket and enable static website hosting with a public read-only bucket policy <br>&emsp; + Upload `index.html`, set the API URL, and test end to end <br>&emsp; + Capture screenshots and a demo video | 17/11/2026 | 17/11/2026 | AWS Docs: S3 |
+| 4 | - Write the Workshop: <br>&emsp; + Reproducible steps <br>&emsp; + Reasons for each service <br>&emsp; + Well-Architected mapping <br> - Mask account IDs, keys, and URLs in screenshots | 18/11/2026 | 18/11/2026 | AWS Docs: Well-Architected Framework |
+| 5 | - Finalize the Proposal and Workshop and fix inconsistencies such as Region and resource names <br> - Complete the Worklog and review the Self-Assessment and Blog requirements | 19/11/2026 | 19/11/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 6 | - **Practice:** <br>&emsp; + Clean up resources in order: S3 bucket, API Gateway, Lambda and its log group, DynamoDB table, IAM role and policy, and Groq API key <br>&emsp; + Check Cost Explorer and Billing to confirm no charges | 20/11/2026 | 20/11/2026 | AWS Docs: Cost Explorer and Billing |
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Built and deployed the chat frontend (`index.html`) on Amazon S3 with static website hosting.
+- Completed end-to-end testing and recorded screenshots along with a demo video.
+- Finalized and aligned the Proposal, Workshop, and Worklog documentation.
+- Cleaned up all AWS and external resources in order and verified zero charges in Cost Explorer and Billing.
