@@ -1,58 +1,28 @@
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+date: 2026-10-25
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 6:
 
-### Mục tiêu tuần 6:
+- Thiết kế system prompt và các quy tắc ràng buộc ngữ cảnh (context rules) cho RAG.
+- Thiết kế lược đồ dữ liệu (data schema) cho cơ sở tri thức pháp lý.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Đọc và nắm cấu trúc của Nghị định 13/2023/NĐ-CP <br> - Chọn lọc các điều khoản trọng tâm: <br>&emsp; + Dữ liệu cá nhân <br>&emsp; + Sự đồng ý <br>&emsp; + Quyền của chủ thể dữ liệu <br>&emsp; + Tiếp thị, quảng cáo <br>&emsp; + Xử lý vi phạm | 19/10/2026 | 19/10/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 3 | - Tạo tài khoản Groq, lấy API key và khám phá Playground <br> - Viết system prompt theo vai trò (role-based): <br>&emsp; + Trả lời bằng tiếng Việt <br>&emsp; + Trích dẫn rõ điều khoản <br>&emsp; + Thêm tuyên bố miễn trừ trách nhiệm (disclaimer) | 20/10/2026 | 20/10/2026 | Groq Docs |
+| 4 | - Bổ sung các ràng buộc ngữ cảnh chặt chẽ và câu trả lời dự phòng (fallback) khi không đủ cơ sở pháp lý <br> - **Thực hành:** <br>&emsp; + Kiểm thử với câu hỏi ngoài phạm vi như vấn đề về thuế | 21/10/2026 | 21/10/2026 | Groq Docs |
+| 5 | - Thiết kế schema `LegalArticles`: <br>&emsp; + `id`, `law_name`, `article_number`, `content`, `keywords` <br> - Định nghĩa cấu trúc ghép prompt (prompt assembly): <br>&emsp; + System prompt + ngữ cảnh pháp lý + câu hỏi, kèm giới hạn về số lượng điều khoản và độ dài | 22/10/2026 | 22/10/2026 | AWS Docs: DynamoDB |
+| 6 | - **Thực hành:** <br>&emsp; + Kiểm thử các câu hỏi mẫu trên Playground (ví dụ: sử dụng số CCCD của khách hàng để quảng cáo) <br> - Tinh chỉnh và lưu lại mẫu prompt cuối cùng | 23/10/2026 | 23/10/2026 | Groq Docs |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Kết quả đạt được Tuần 6:
 
-
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Nắm vững cấu trúc chính và các điều khoản trọng tâm của Nghị định 13/2023/NĐ-CP.
+- Hoàn thiện system prompt theo vai trò cùng các quy tắc ràng buộc ngữ cảnh và cơ chế trả lời dự phòng.
+- Thiết kế hoàn chỉnh lược đồ dữ liệu `LegalArticles` cho kho dữ liệu pháp lý.
+- Định nghĩa, kiểm thử và chốt mẫu ghép prompt kèm các giới hạn ngữ cảnh.

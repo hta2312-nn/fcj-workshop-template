@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+date: 2026-10-18
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 5:
 
-### Mục tiêu tuần 5:
+- Lựa chọn đề tài dự án workshop và xác định phạm vi triển khai.
+- Thiết kế kiến trúc hệ thống và viết bản nháp Proposal.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Xem lại các yêu cầu của bài Workshop <br> - Đề xuất đề tài: AI Legal & Security Assistant cho Nghị định 13/2023/NĐ-CP <br> - Xác định phạm vi dự án và đối tượng người dùng mục tiêu | 12/10/2026 | 12/10/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 3 | - Nghiên cứu về RAG và so sánh các lựa chọn LLM: <br>&emsp; + Amazon Bedrock so với API bên ngoài (Groq) <br> - So sánh tìm kiếm theo từ khóa (keyword retrieval) với tìm kiếm vector (vector search) và chọn phương án phù hợp với chi phí cũng như giới hạn Free Tier | 13/10/2026 | 13/10/2026 | Groq Docs |
+| 4 | - Lựa chọn các dịch vụ AWS và nêu rõ lý do cho từng lựa chọn <br> - Vẽ sơ đồ kiến trúc (architecture diagram) và luồng dữ liệu được đánh số (numbered data flow) | 14/10/2026 | 14/10/2026 | AWS Docs: Well-Architected Framework |
+| 5 | - Viết bản nháp Proposal: <br>&emsp; + Tóm tắt điều hành (Executive Summary) <br>&emsp; + Đặt vấn đề (Problem Statement) <br>&emsp; + Kiến trúc giải pháp (Solution Architecture) | 15/10/2026 | 15/10/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 6 | - Viết bản nháp Proposal: <br>&emsp; + Triển khai kỹ thuật (Technical Implementation) <br>&emsp; + Tiến độ & Ngân sách (Timeline & Budget) <br>&emsp; + Rủi ro & Kết quả kỳ vọng (Risks & Expected Outcomes) <br> - Trao đổi và rà soát bản nháp với các mentor và thành viên cùng nhóm | 16/10/2026 | 16/10/2026 | <https://hcm-rules.awsfcaj.com/> |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Kết quả đạt được Tuần 5:
 
-
-### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Lựa chọn và xác định rõ phạm vi đề tài dự án (AI Legal & Security Assistant cho Nghị định 13/2023/NĐ-CP).
+- Chốt được phương pháp truy xuất RAG và nhà cung cấp LLM phù hợp với chi phí và giới hạn Free Tier.
+- Hoàn thiện thiết kế kiến trúc hệ thống, sơ đồ kiến trúc và luồng dữ liệu.
+- Hoàn thành bản nháp Proposal đầu tiên và nhận góp ý từ mentor cùng các bạn trong nhóm.
