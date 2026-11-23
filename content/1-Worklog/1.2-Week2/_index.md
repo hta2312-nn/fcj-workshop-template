@@ -1,57 +1,33 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-09-27
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 2 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Understand AWS IAM and apply the least-privilege principle.
+- Understand Amazon S3 and static website hosting.
+- Understand the basics of Amazon EC2.
+- Practice cleaning up lab resources and watching Free Tier usage.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Learn IAM fundamentals: <br>&emsp; + Users, groups, roles, and policies <br> - Understand the least-privilege principle and MFA for the root user <br> - Review the root account security recommendations | 21/09/2026 | 21/09/2026 | AWS Docs: IAM |
+| 3 | - Understand roles and temporary credentials <br> - **Practice:** <br>&emsp; + Create an IAM user and group and attach a managed policy <br>&emsp; + Write a simple custom JSON policy and test its permissions | 22/09/2026 | 22/09/2026 | AWS Docs: IAM |
+| 4 | - Learn S3 fundamentals: <br>&emsp; + Buckets, objects, storage classes, versioning, and Block Public Access <br> - **Practice:** <br>&emsp; + Create a bucket, upload a file, and review bucket policies <br>&emsp; + Host a simple static website on S3 | 23/09/2026 | 23/09/2026 | AWS Docs: S3 |
+| 5 | - Learn EC2 basics: <br>&emsp; + Instance types, AMI, key pairs, security groups, and EBS <br> - **Practice:** <br>&emsp; + Launch and connect to a Free Tier instance <br>&emsp; + Terminate the instance to avoid cost | 24/09/2026 | 24/09/2026 | AWS Docs: EC2 |
+| 6 | - Summarize the week's notes <br> - Check Free Tier usage and the AWS Budget alert <br> - Clean up all lab resources created this week | 25/09/2026 | 25/09/2026 | Youtube: AWS Study Group |
+| 7 | - Attend the talkshow "The Thinking Behind Building The Bot" (09:00, 26th Floor, Bitexco Tower, Ho Chi Minh City) <br> - Topic: the thinking and design approach behind building a bot <br> - Note the key takeaways that can be applied to the team's own chatbot project | 26/09/2026 | 26/09/2026 | Event: Talkshow "The Thinking Behind Building The Bot" |
 
 ### Week 2 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Understood IAM users, groups, roles, and policies.
+- Applied the least-privilege principle when writing and testing a custom JSON policy.
+- Created an S3 bucket and hosted a static website on Amazon S3.
+- Launched, connected to, and terminated an EC2 instance safely.
+- Cleaned up all lab resources and monitored Free Tier usage along with AWS Budget alerts.
+- Attended the talkshow "The Thinking Behind Building The Bot" and gathered key takeaways for the team's chatbot project.
