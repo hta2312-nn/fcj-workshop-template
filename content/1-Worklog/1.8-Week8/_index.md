@@ -1,57 +1,28 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-11-08
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Build and test the backend: Lambda, Groq API, API Gateway.
+- Standardize error handling.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - **Practice:** <br>&emsp; + Create the Lambda function `legal-ai-chat-lambda` (Python 3.12) with the execution role <br>&emsp; + Set the timeout to 30 seconds and configure the `GROQ_API_KEY` environment variable <br>&emsp; + Write `retrieve_legal_context` | 02/11/2026 | 02/11/2026 | AWS Docs: Lambda |
+| 3 | - **Practice:** <br>&emsp; + Implement prompt assembly and the Groq API call <br>&emsp; + Create the HTTP API `LegalChatAPI` with route `POST /chat`, configure CORS, and deploy stage `v1` | 03/11/2026 | 03/11/2026 | AWS Docs: API Gateway |
+| 4 | - **Practice:** <br>&emsp; + Test with `curl`: a sample question, an empty question (`400`), and an out-of-scope question <br>&emsp; + Review the CloudWatch logs of each request | 04/11/2026 | 04/11/2026 | AWS Docs: CloudWatch |
+| 5 | - Add input validation and standardized HTTP error responses: <br>&emsp; + `400`, `429`, `502`, `504`, and `500` <br> - Fix the issues found during testing | 05/11/2026 | 05/11/2026 | AWS Docs: Lambda |
+| 6 | - Review security practices: <br>&emsp; + Do not log user questions <br>&emsp; + Protect the API key <br>&emsp; + Maintain least privilege <br> - Note the improvements for the next steps | 06/11/2026 | 06/11/2026 | AWS Docs: Well-Architected Framework |
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Completed the Lambda RAG retrieval and prompt assembly logic (`legal-ai-chat-lambda`).
+- Successfully integrated and called the Groq API from AWS Lambda.
+- Exposed the backend through Amazon API Gateway (`LegalChatAPI`, `POST /chat`, stage `v1`) with CORS configured.
+- Standardized input validation and error handling (`400`, `429`, `502`, `504`, `500`), and verified both success and error cases using `curl` and CloudWatch logs.

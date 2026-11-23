@@ -1,59 +1,29 @@
 ---
 title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+date: 2026-11-15
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 9:
 
-### Mục tiêu tuần 9:
+- Gia cố hệ thống (hardening) và thiết lập cơ chế giám sát (monitoring).
+- Kiểm tra chất lượng câu trả lời và độ chính xác của nội dung pháp lý.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - **Thực hành:** <br>&emsp; + Cấu hình giới hạn lưu lượng (throttling) trên stage `v1` <br>&emsp; + Gửi request với tần suất cao để xác nhận mã lỗi HTTP `429` | 09/11/2026 | 09/11/2026 | AWS Docs: API Gateway |
+| 3 | - **Thực hành:** <br>&emsp; + Thiết lập thời gian lưu giữ log (log retention) trên CloudWatch là 7 ngày <br>&emsp; + Kiểm tra các chỉ số (metrics) của Lambda và tạo cảnh báo (alarm) cho lỗi Lambda | 10/11/2026 | 10/11/2026 | AWS Docs: CloudWatch |
+| 4 | - **Thực hành:** <br>&emsp; + Kiểm thử các tình huống prompt injection và câu hỏi ngoài phạm vi <br> - Tinh chỉnh lại system prompt và danh sách từ khóa (keywords) | 11/11/2026 | 11/11/2026 | Groq Docs |
+| 5 | - Đối chiếu các điều khoản pháp lý với văn bản gốc chính thức <br> - Kiểm tra các văn bản luật mới hơn, chẳng hạn như Luật Bảo vệ Dữ liệu Cá nhân 2025, và ghi nhận các tác động | 12/11/2026 | 12/11/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 6 | - Lập bảng ước tính chi phí bằng AWS Pricing Calculator <br> - Liệt kê các biện pháp tối ưu hóa chi phí | 13/11/2026 | 13/11/2026 | AWS Pricing Calculator |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Kết quả đạt được Tuần 9:
 
-
-### Kết quả đạt được tuần 9:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Cấu hình thành công API throttling trên stage `v1` và kiểm chứng cơ chế giới hạn tốc độ trả về mã `429`.
+- Thiết lập thời gian lưu giữ log CloudWatch (7 ngày), theo dõi metrics và tạo cảnh báo cho các lỗi của Lambda.
+- Kiểm thử an toàn các kịch bản prompt injection, câu hỏi ngoài phạm vi, đồng thời tối ưu lại system prompt và từ khóa.
+- Xác minh độ chính xác của nội dung pháp lý và ghi nhận tác động từ các quy định mới như Luật Bảo vệ Dữ liệu Cá nhân 2025.
+- Hoàn thành bảng dự toán chi phí trên AWS Pricing Calculator kèm danh sách các phương án tối ưu chi phí.

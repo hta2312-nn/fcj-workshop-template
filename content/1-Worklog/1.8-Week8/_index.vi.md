@@ -1,59 +1,28 @@
 ---
 title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+date: 2026-11-08
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 8:
 
-### Mục tiêu tuần 8:
+- Xây dựng và kiểm thử phần backend: Lambda, Groq API, API Gateway.
+- Chuẩn hóa cơ chế xử lý lỗi (error handling).
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - **Thực hành:** <br>&emsp; + Tạo Lambda function `legal-ai-chat-lambda` (Python 3.12) gắn với execution role đã tạo <br>&emsp; + Thiết lập timeout 30 giây và cấu hình biến môi trường `GROQ_API_KEY` <br>&emsp; + Viết hàm `retrieve_legal_context` | 02/11/2026 | 02/11/2026 | AWS Docs: Lambda |
+| 3 | - **Thực hành:** <br>&emsp; + Triển khai phần ghép prompt (prompt assembly) và gọi Groq API <br>&emsp; + Tạo HTTP API `LegalChatAPI` với route `POST /chat`, cấu hình CORS và triển khai stage `v1` | 03/11/2026 | 03/11/2026 | AWS Docs: API Gateway |
+| 4 | - **Thực hành:** <br>&emsp; + Kiểm thử bằng `curl`: câu hỏi mẫu, câu hỏi rỗng (`400`) và câu hỏi ngoài phạm vi <br>&emsp; + Kiểm tra CloudWatch logs cho từng request | 04/11/2026 | 04/11/2026 | AWS Docs: CloudWatch |
+| 5 | - Bổ sung kiểm tra dữ liệu đầu vào (input validation) và chuẩn hóa các mã lỗi: <br>&emsp; + `400`, `429`, `502`, `504` và `500` <br> - Sửa các lỗi phát sinh trong quá trình kiểm thử | 05/11/2026 | 05/11/2026 | AWS Docs: Lambda |
+| 6 | - Rà soát bảo mật: <br>&emsp; + Không ghi log câu hỏi của người dùng <br>&emsp; + Bảo vệ API key <br>&emsp; + Duy trì nguyên tắc đặc quyền tối thiểu (least privilege) <br> - Ghi chú các điểm cần cải thiện cho các bước tiếp theo | 06/11/2026 | 06/11/2026 | AWS Docs: Well-Architected Framework |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Kết quả đạt được Tuần 8:
 
-
-### Kết quả đạt được tuần 8:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Hoàn thiện logic RAG truy xuất ngữ cảnh và ghép prompt trên AWS Lambda (`legal-ai-chat-lambda`).
+- Tích hợp và gọi thành công Groq API từ Lambda.
+- Công khai (expose) backend thông qua Amazon API Gateway (`LegalChatAPI`, `POST /chat`, stage `v1`) có cấu hình CORS.
+- Chuẩn hóa kiểm tra đầu vào cùng các mã lỗi (`400`, `429`, `502`, `504`, `500`) và kiểm thử thành công cả trường hợp hợp lệ lẫn ngoại lệ bằng `curl` kết hợp theo dõi CloudWatch logs.
