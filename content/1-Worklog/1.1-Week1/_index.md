@@ -7,7 +7,7 @@ pre: " <b> 1.1. </b> "
 ---
 
 ### Week 1 Objectives:
-
+vfghfcfh
 - Get acquainted with FCAJ members and understand the FCAJ rules and project requirements.
 - Understand the fundamentals of AWS and the AWS cloud environment.
 - Create and configure an AWS account for hands-on practice.
