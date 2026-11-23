@@ -1,59 +1,40 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2026-09-20
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu Tuần 1:
 
-### Mục tiêu tuần 1:
+- Làm quen với các thành viên FCAJ, nắm rõ nội quy và yêu cầu dự án của FCAJ.
+- Hiểu các kiến thức nền tảng về AWS và môi trường đám mây AWS.
+- Tạo và cấu hình tài khoản AWS để thực hành.
+- Hiểu về quản lý chi phí tài khoản AWS và sử dụng AWS Budgets.
+- Hiểu về AWS Support và cách gửi yêu cầu hỗ trợ kỹ thuật khi gặp sự cố.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Các công việc cần triển khai trong tuần:
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Làm quen với các thành viên FCAJ <br> - Đọc và nắm rõ nội quy, quy định, yêu cầu và lộ trình dự án của FCAJ <br> - Xem lại các yêu cầu về Worklog, Proposal, Blog, Workshop và Self-Assessment | 14/09/2026 | 14/09/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 3 | - Tìm hiểu kiến thức nền tảng về Điện toán đám mây (Cloud Computing) <br> - Hiểu AWS là gì và mô hình đám mây cơ bản của AWS <br> - Tìm hiểu các khái niệm cơ bản về hạ tầng toàn cầu của AWS <br> - Tìm hiểu các nhóm dịch vụ chính của AWS: <br>&emsp; + Compute (Tính toán) <br>&emsp; + Storage (Lưu trữ) <br>&emsp; + Networking (Mạng) <br>&emsp; + Database (Cơ sở dữ liệu) <br>&emsp; + Security (Bảo mật) <br>&emsp; + Management (Quản trị) | 15/09/2026 | 15/09/2026 | Youtube: AWS Study Group – Module 01 / AWS Fundamentals |
+| 4 | - Tìm hiểu cách tạo và cấu hình tài khoản AWS <br> - Khám phá AWS Management Console <br> - Hiểu về AWS Regions và Availability Zones <br> - Kiểm tra các thiết lập tài khoản cơ bản và các lưu ý về bảo mật <br> - Xác nhận tài khoản AWS đã sẵn sàng cho việc thực hành | 16/09/2026 | 16/09/2026 | Youtube: AWS Study Group – Module 01 / AWS Fundamentals |
+| 5 | - Tìm hiểu mô hình tính phí cơ bản của AWS và khái niệm Pay-as-you-go <br> - Hiểu tầm quan trọng của việc theo dõi chi phí trên AWS <br> - Tìm hiểu cách sử dụng AWS Budgets <br> - **Thực hành:** <br>&emsp; + Tạo một budget cơ bản và cấu hình ngưỡng/cảnh báo chi phí <br>&emsp; + Kiểm tra mức sử dụng hiện tại và chi phí ước tính của tài khoản | 17/09/2026 | 17/09/2026 | Youtube: AWS Study Group – Module 01 / AWS Fundamentals |
+| 6 | - Tìm hiểu AWS Support là gì và các loại hình hỗ trợ hiện có <br> - Hiểu sự khác biệt giữa tài liệu AWS (documentation), AWS Support và hỗ trợ từ cộng đồng <br> - Tìm hiểu cách tạo và quản lý một yêu cầu hỗ trợ (support case) <br> - Xác định các thông tin cần thiết khi báo cáo sự cố trên AWS <br> - **Thực hành:** <br>&emsp; + Thao tác điều hướng trên AWS Support Center | 18/09/2026 | 18/09/2026 | Youtube: AWS Study Group – Module 01 / AWS Fundamentals |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Kết quả đạt được Tuần 1:
 
-
-### Kết quả đạt được tuần 1:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Nắm rõ nội quy, yêu cầu và quy trình làm việc của dự án FCAJ.
+- Hiểu được kiến thức nền tảng về Điện toán đám mây, AWS và các nhóm dịch vụ chính của AWS:
+  - Compute
+  - Storage
+  - Networking
+  - Database
+  - Security
+  - Management
+- Tạo và cấu hình thành công tài khoản AWS phục vụ cho việc thực hành.
+- Làm quen với giao diện AWS Management Console, hiểu rõ khái niệm AWS Regions và Availability Zones.
+- Hiểu mô hình tính phí cơ bản của AWS, nguyên tắc Pay-as-you-go và tầm quan trọng của việc giám sát chi phí.
+- Tạo và cấu hình thành công AWS Budget kèm ngưỡng cảnh báo chi phí.
+- Hiểu mục đích của AWS Support, làm quen với AWS Support Center, quy trình tạo support case và cách cung cấp đầy đủ thông tin kỹ thuật khi báo cáo sự cố để khắc phục lỗi.

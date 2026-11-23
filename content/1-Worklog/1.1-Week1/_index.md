@@ -1,57 +1,40 @@
 ---
 title: "Week 1 Worklog"
-date: 2024-01-01
+date: 2026-09-20
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 1 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Get acquainted with FCAJ members and understand the FCAJ rules and project requirements.
+- Understand the fundamentals of AWS and the AWS cloud environment.
+- Create and configure an AWS account for hands-on practice.
+- Understand AWS account cost management and AWS Budgets.
+- Understand AWS Support and how to request technical assistance when encountering problems.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Get acquainted with FCAJ members <br> - Read and understand the FCAJ rules, regulations, requirements, and project timeline <br> - Review the Worklog, Proposal, Blog, Workshop, and Self-Assessment requirements | 14/09/2026 | 14/09/2026 | <https://hcm-rules.awsfcaj.com/> |
+| 3 | - Learn the fundamentals of Cloud Computing <br> - Understand what AWS is and the basic AWS cloud model <br> - Learn the basic concepts of AWS global infrastructure <br> - Learn the main categories of AWS services: <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + Security <br>&emsp; + Management | 15/09/2026 | 15/09/2026 | Youtube: AWS Study Group – Module 01 / AWS Fundamentals |
+| 4 | - Learn how to create and configure an AWS account <br> - Explore the AWS Management Console <br> - Understand AWS Regions and Availability Zones <br> - Review basic account settings and security considerations <br> - Verify that the AWS account is ready for hands-on practice | 16/09/2026 | 16/09/2026 | Youtube: AWS Study Group – Module 01 / AWS Fundamentals |
+| 5 | - Learn the basic AWS pricing model and Pay-as-you-go concept <br> - Understand why AWS cost monitoring is important <br> - Learn how to use AWS Budgets <br> - **Practice:** <br>&emsp; + Create a basic budget and configure a cost threshold/alert <br>&emsp; + Review the account's current usage and estimated costs | 17/09/2026 | 17/09/2026 | Youtube: AWS Study Group – Module 01 / AWS Fundamentals |
+| 6 | - Learn what AWS Support is and what types of assistance are available <br> - Understand the difference between AWS documentation, AWS Support, and community support <br> - Learn how to create and manage a support case <br> - Identify the information that should be included when reporting an AWS problem <br> - **Practice:** <br>&emsp; + Navigate the AWS Support Center | 18/09/2026 | 18/09/2026 | Youtube: AWS Study Group – Module 01 / AWS Fundamentals |
 
 ### Week 1 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Understood the FCAJ rules, requirements, and project workflow.
+- Understood the fundamentals of Cloud Computing and AWS, including the main categories of AWS services:
+  - Compute
+  - Storage
+  - Networking
+  - Database
+  - Security
+  - Management
+- Successfully created and configured an AWS account for hands-on practice.
+- Became familiar with the AWS Management Console and understood AWS Regions and Availability Zones.
+- Understood the basic AWS pricing model, the Pay-as-you-go concept, and the importance of monitoring AWS costs.
+- Created and configured an AWS Budget with cost thresholds/alerts.
+- Understood the purpose of AWS Support, became familiar with the AWS Support Center and support case process, and learned how to report an AWS technical issue with relevant troubleshooting information.
