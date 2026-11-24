@@ -1,115 +1,89 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-11-24
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
-
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+# Legal RAG Platform: Automated Legal Advisory System for Decree 13/2023/ND-CP
+## A Unified AWS Serverless Solution with LLM for Real-Time Legal Research and Analysis
 
 ### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+The Legal RAG Platform is an automated advisory system that helps users and team members quickly look up and analyze complex Vietnamese legal regulations. It focuses on Decree 13/2023/ND-CP on personal data protection. The platform is built on a fully serverless architecture on AWS and uses a large language model (LLM) from the Groq API (qwen/qwen3.8-27b). Answers are grounded in the actual legal text, which reduces the risk of AI hallucination. The platform also keeps operating costs at $0 by staying within the AWS Free Tier.
 
 ### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+#### The Problem
+- Legal documents such as Decree 13/2023/ND-CP are long, dense, and difficult for non-experts to search manually.
+- General-purpose AI tools, such as the free version of ChatGPT, often lack in-depth knowledge of Vietnamese law. They tend to give generic answers without an accurate legal basis.
+- Building a self-hosted AI system is expensive in hardware and complex to operate.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+#### The Solution
+The platform uses an automated RAG (Retrieval-Augmented Generation) pipeline. When a user submits a question, the system searches the database for the most relevant legal provisions and injects them into a System Prompt. The LLM then generates an answer that cites those provisions clearly.
+- **Amazon DynamoDB** stores the extracted legal provisions in the LegalArticles table.
+- **AWS Lambda** handles the backend logic, and **Amazon API Gateway** exposes a stable API endpoint.
+- **Groq API** with the qwen/qwen3.8-27b model generates clear, coherent answers.
+- **Amazon S3 Static Website** hosts the web interface, where users interact through a chat window.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+#### Benefits and Return on Investment (ROI)
+- **High accuracy:** Answers stay close to the provided legal text and are transparent and well-supported.
+- **Cost efficiency:** The serverless design runs within the AWS Free Tier, with monthly costs close to $0.
+- **Scalability:** The decoupled architecture makes it easy to add new legal documents, such as the Law on Network Information Security or the Law on Information Technology, to DynamoDB in the future.
 
 ### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+The system follows a serverless architecture that connects the frontend, backend, and external LLM in a closed loop.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+#### AWS Services and Technologies
+- **Amazon S3 Static Website:** Hosts and serves the static web interface (index.html, CSS, and JavaScript).
+- **Amazon API Gateway:** Provides a public HTTP/REST API, handles CORS, and forwards client requests to Lambda.
+- **AWS Lambda (Python):** Runs the RAG logic, queries DynamoDB, and calls the Groq API.
+- **Amazon DynamoDB (LegalArticles):** Stores legal provisions and supports fast keyword-based lookup.
+- **Groq API (qwen/qwen3.8-27b):** Generates and analyzes natural language based on the legal context provided.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
-
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
-
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+#### Component Design
+- **Frontend:** Users open the website hosted on S3 and enter a question in the chat window. The browser sends an HTTP POST request containing the question over HTTPS to API Gateway.
+- **API Gateway:** Receives the request, validates CORS settings, and forwards the payload to the Lambda function.
+- **Data Retrieval (DynamoDB):** The `retrieve_legal_context` function searches the LegalArticles table for relevant provisions. For example, it can retrieve rules on handling violations involving citizen identity numbers (CCCD) and personal data under Decree 13.
+- **Augmentation and Generation (Groq API):** Lambda combines the user's question with the retrieved legal context into a System Prompt with strict constraints, which require answers to be based only on the provided context. It then calls the Groq API.
+- **Response Flow:** Groq returns the result to Lambda. Lambda formats a standard JSON response and sends it back through API Gateway to display in the chat window.
 
 ### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
-
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+#### Implementation Phases
+- **Phase 1, Prompt Design and RAG Mechanism:** Write a System Prompt that defines the role of a legal expert and sets a context constraint that prohibits fabricated information.
+- **Phase 2, Backend and Database:**
+    - Create the DynamoDB LegalArticles table.
+    - Write the Python code for AWS Lambda, including the retrieval function and the Groq API integration.
+    - Configure API Gateway, enable CORS headers, and implement standardized error handling. This covers codes 400 and 502/504, as well as code 429 when the Groq API rate limit is exceeded.
+- **Phase 3, Testing and Refinement:** Send HTTP POST requests with curl and test directly in the web interface. Monitor logs in Amazon CloudWatch.
 
 ### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+- **Research and Design:** Define the legal scope (Decree 13/2023/ND-CP) and design the RAG data flow.
+- **Development and Deployment:** Build the DynamoDB database, complete the Lambda function, and configure API Gateway.
+- **Integration and Testing:** Connect the S3 static website to API Gateway, test the accuracy of answers from the Groq LLM, and refine error handling.
 
 ### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+#### AWS Infrastructure
+- **Amazon S3:** Free within Free Tier limits.
+- **Amazon API Gateway:** Free for the first 1 million requests per month.
+- **AWS Lambda:** Free for up to 1 million requests per month.
+- **Amazon DynamoDB:** Free within 25 GB of storage and 25 WCU and 25 RCU.
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+**Total AWS cost:** $0.00 per month.
 
-Total: $0.7/month, $8.40/12 months
+#### Groq API
+The project uses the free tier for the open-source model (qwen/qwen3.8-27b).
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+**Total project investment:** VND 0 ($0).
 
 ### 7. Risk Assessment
 #### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
-
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
-
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+- **API overload (Groq API rate limit, error 429):** Implement error handling and display a clear, user-friendly message in the chat interface when the request limit is temporarily exceeded.
+- **Inaccurate AI answers (hallucination):** Strengthen the System Prompt so the model uses only the legal context retrieved from DynamoDB and does not infer beyond that source.
+- **CORS errors in the browser:** Configure full CORS headers (Access-Control-Allow-Origin: *, POST, OPTIONS) directly in API Gateway.
 
 ### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+#### Technical Achievements
+A complete serverless backend that scales automatically, runs reliably, and operates at $0 cost.
+
+#### Practical Value
+A standardized API gateway and an intuitive chat interface that enable fast, accurate lookup of the core provisions of Decree 13/2023/ND-CP. The platform supports both study and research.
