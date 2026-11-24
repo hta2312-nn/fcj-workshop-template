@@ -1,5 +1,5 @@
 ---
-title: "5.7 Thành quả cuối cùng và hướng phát triển"
+title: "Thành quả cuối cùng và hướng phát triển"
 date: 2026-11-24
 weight: 7
 chapter: false

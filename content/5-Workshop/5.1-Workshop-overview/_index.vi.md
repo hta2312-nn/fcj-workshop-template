@@ -1,5 +1,5 @@
 ---
-title: "5.1 Giới thiệu"
+title: "Giới thiệu"
 date: 2026-11-24
 weight: 1
 chapter: false
@@ -16,7 +16,7 @@ pre: " <b> 5.1. </b> "
 Nhân viên cần câu trả lời nhanh về quy định dữ liệu cá nhân, ví dụ việc dùng dữ liệu CCCD của khách hàng để gửi quảng cáo. Chatbot công cộng có thể bịa điều luật hoặc trích dẫn sai. Mục tiêu của dự án là câu trả lời chỉ bám vào văn bản pháp luật nhóm cung cấp, và hệ thống chạy trên AWS với chi phí gần như bằng 0.
 
 ### Kiến trúc và luồng dữ liệu
-![Sơ đồ kiến trúc và luồng dữ liệu](/images/5-Workshop/5.1/5-1-01.png)
+![Sơ đồ kiến trúc và luồng dữ liệu](../../images/5-Workshop/5.1/5-1-01.png)
 
 **Luồng dữ liệu:**
 1. Người dùng mở website trên S3, nhập câu hỏi vào khung chat và gửi. index.html gửi HTTP POST qua HTTPS tới API Gateway.

@@ -1,5 +1,5 @@
 ---
-title: "5.3 Phase 1: Prompt Design and RAG Mechanism"
+title: "Phase 1: Prompt Design and RAG Mechanism"
 date: 2026-11-24
 weight: 3
 chapter: false
@@ -41,6 +41,6 @@ pre: " <b> 5.3. </b> "
 2. Place the legal context before the user's question in the message.
 3. Limit the number and length of provisions so the prompt stays within the model's rate and token limits.
 
-![Prompt structure with system prompt, legal context, and question](/images/5-Workshop/5.3/5-3-01.png)
+![Prompt structure with system prompt, legal context, and question](../../images/5-Workshop/5.3/5-3-01.png)
 
 **Check:** the printed prompt contains all three parts in the correct order.

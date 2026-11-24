@@ -1,5 +1,5 @@
 ---
-title: "5.7 Final Results and Future Development"
+title: "Final Results and Future Development"
 date: 2026-11-24
 weight: 7
 chapter: false

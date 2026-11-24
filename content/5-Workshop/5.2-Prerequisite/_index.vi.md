@@ -1,5 +1,5 @@
 ---
-title: "5.2 Chuẩn bị"
+title: "Chuẩn bị"
 date: 2026-11-24
 weight: 2
 chapter: false
@@ -47,14 +47,14 @@ Lambda chỉ cần hai quyền: đọc bảng LegalArticles và ghi log. Thay ph
 
 Gắn thêm managed policy **AWSLambdaBasicExecutionRole** để Lambda ghi được log vào CloudWatch.
 
-![IAM role có managed policy AWSLambdaBasicExecutionRole](/images/5-Workshop/5.2/5-2-01.png)
+![IAM role có managed policy AWSLambdaBasicExecutionRole](../../images/5-Workshop/5.2/5-2-01.png)
 
 ### Tài khoản Groq và API key
 **Tạo tài khoản và truy cập Groq Console**
 1. Truy cập console.groq.com và đăng nhập (hoặc đăng ký tài khoản mới).
 2. Sau khi đăng nhập, bạn sẽ thấy trang Dashboard của Groq Console.
 
-![Trang Dashboard của Groq](/images/5-Workshop/5.2/5-2-02.png)
+![Trang Dashboard của Groq](../../images/5-Workshop/5.2/5-2-02.png)
 
 Trang Dashboard hiển thị lượng Token Usage trong 30 ngày gần nhất. Các lối tắt Playground, Docs và Manage Team giúp bạn chat thử với mô hình, xem tài liệu và quản lý thành viên.
 
@@ -66,8 +66,8 @@ Trang Dashboard hiển thị lượng Token Usage trong 30 ngày gần nhất. C
    - **Expiration:** chọn thời hạn của key.
 4. Chọn **Submit**.
 
-![Trang API Keys](/images/5-Workshop/5.2/5-2-03.png)
-![Hộp thoại Create API Key](/images/5-Workshop/5.2/5-2-04.png)
+![Trang API Keys](../../images/5-Workshop/5.2/5-2-03.png)
+![Hộp thoại Create API Key](../../images/5-Workshop/5.2/5-2-04.png)
 
 Hệ thống hiển thị API key dạng `gsk_...`. Chọn **Copy** để sao chép key.
 
@@ -82,7 +82,7 @@ Chọn **Done** để hoàn tất.
 2. Ở ô chọn model phía trên, chọn model cần dùng. Trong bài này là **qwen/qwen3.8-27b**.
 3. Chọn **View code** (khi đang mở sẽ hiện Hide code) để xem đoạn code mẫu gọi API đúng với model đã chọn.
 
-![Chọn model trong Playground](/images/5-Workshop/5.2/5-2-06.png)
+![Chọn model trong Playground](../../images/5-Workshop/5.2/5-2-06.png)
 
 ### Danh mục tài nguyên
 | Tài nguyên | Tên | Ghi chú |
@@ -100,7 +100,7 @@ Tạo AWS Budget có cảnh báo email **trước khi xây dựng bất cứ th�
 2. Ở menu bên trái, chọn **Budgets**.
 3. Chọn **Create budget** ở góc phải.
 
-![Trang Budgets, danh sách trống (0 budgets)](/images/5-Workshop/5.2/5-2-07.png)
+![Trang Budgets, danh sách trống (0 budgets)](../../images/5-Workshop/5.2/5-2-07.png)
 
 **Chọn loại budget**
 - **Budget setup:** chọn **Use a template (simplified)**, tức là dùng cấu hình khuyến nghị có sẵn. Tùy chọn Customize (advanced) cho phép chỉnh chi tiết hơn nhưng không cần thiết ở đây.
@@ -108,7 +108,7 @@ Tạo AWS Budget có cảnh báo email **trước khi xây dựng bất cứ th�
 - **Billing View** là tùy chọn, có thể bỏ qua.
 - Kéo xuống cuối trang và chọn **Next**.
 
-![Chọn template Zero spend budget](/images/5-Workshop/5.2/5-2-08.png)
+![Chọn template Zero spend budget](../../images/5-Workshop/5.2/5-2-08.png)
 
 **Đặt tên và email nhận cảnh báo**
 - **Budget name:** giữ tên mặc định hoặc đặt tên gợi nhớ hơn, ví dụ LegalRAG-Zero-Spend.
@@ -117,7 +117,7 @@ Tạo AWS Budget có cảnh báo email **trước khi xây dựng bất cứ th�
 - Template settings giữ mặc định (có thể chỉnh sau).
 - Chọn **Create budget**.
 
-![Đặt tên budget và nhập email nhận thông báo](/images/5-Workshop/5.2/5-2-09.png)
+![Đặt tên budget và nhập email nhận thông báo](../../images/5-Workshop/5.2/5-2-09.png)
 
 **Kết quả**
 Budget được tạo thành công và ở trạng thái **Healthy**. Cột Budget hiển thị $1.00, đây là mức nền của template, còn ngưỡng cảnh báo vẫn là $0.01.

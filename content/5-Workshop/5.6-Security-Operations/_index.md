@@ -1,5 +1,5 @@
 ---
-title: "5.6 Security and Operations"
+title: "Security and Operations"
 date: 2026-11-24
 weight: 6
 chapter: false
@@ -33,15 +33,15 @@ pre: " <b> 5.6. </b> "
 **View logs in CloudWatch**
 1. Open the CloudWatch overview page and select **Logs** to view the Lambda logs.
 
-![CloudWatch overview, Logs section](/images/5-Workshop/5.6/5-6-01.png)
+![CloudWatch overview, Logs section](../../images/5-Workshop/5.6/5-6-01.png)
 
 2. In the **Log groups** list, select the Lambda function's log group, which Lambda creates automatically.
 
-![Log groups list](/images/5-Workshop/5.6/5-6-02.png)
+![Log groups list](../../images/5-Workshop/5.6/5-6-02.png)
 
 3. In the **Log streams** list, each stream records the function's requests along with the time of the latest log entry.
 
-![Log streams list](/images/5-Workshop/5.6/5-6-03.png)
+![Log streams list](../../images/5-Workshop/5.6/5-6-03.png)
 
 **Check:** test requests appear in the logs, and the Budget alert is active.
 
@@ -58,7 +58,7 @@ pre: " <b> 5.6. </b> "
    - **Default route throttling:** limits applied to every route in the stage. Burst and Rate limits both show "Not configured," which means no limit is set.
    - **Account throttling:** the account-wide ceiling for the region (Burst 5000, Rate 10000), shared by all APIs. This is a system-level limit and cannot be changed here.
 
-![Stage Throttling page](/images/5-Workshop/5.6/5-6-04.png)
+![Stage Throttling page](../../images/5-Workshop/5.6/5-6-04.png)
 
 2. Select **Edit** in the Default route throttling section and set:
    - **Rate limit:** 5, the maximum average number of requests per second.

@@ -1,5 +1,5 @@
 ---
-title: "5.1 Introduction"
+title: "Introduction"
 date: 2026-11-24
 weight: 1
 chapter: false
@@ -16,7 +16,7 @@ pre: " <b> 5.1. </b> "
 Staff need quick answers about personal data regulations, for example whether they can use a customer's citizen ID (CCCD) data for marketing. Public chatbots may invent legal provisions or cite them incorrectly. The goal is for answers to rely only on the legal texts the team provides, running on AWS at near-zero cost.
 
 ### Architecture and data flow
-![Architecture diagram and data flow](/images/5-Workshop/5.1/5-1-01.png)
+![Architecture diagram and data flow](../../images/5-Workshop/5.1/5-1-01.png)
 
 **Data flow:**
 1. The user opens the website on S3, types a question into the chat window, and sends it. index.html sends an HTTP POST over HTTPS to API Gateway.

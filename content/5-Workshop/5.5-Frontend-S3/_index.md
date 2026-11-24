@@ -1,5 +1,5 @@
 ---
-title: "5.5 Frontend: S3 Static Website"
+title: "Frontend: S3 Static Website"
 date: 2026-11-24
 weight: 5
 chapter: false
@@ -24,7 +24,7 @@ pre: " <b> 5.5. </b> "
 3. Display clear messages for errors 400, 429, and 502/504.
 4. Recommendation: add a disclaimer stating that answers are preliminary and not legal advice.
 
-![The index.html chat interface](/images/5-Workshop/5.5/5-5-01.png)
+![The index.html chat interface](../../images/5-Workshop/5.5/5-5-01.png)
 
 **Check:** opening index.html locally shows the chat page and greeting.
 
@@ -41,32 +41,32 @@ pre: " <b> 5.5. </b> "
 **Create the bucket**
 1. Create a General purpose bucket in ap-southeast-2 and name it ai-legal-assistant-frontend-hau.
 
-![Creating the S3 bucket in ap-southeast-2](/images/5-Workshop/5.5/5-5-02.png)
+![Creating the S3 bucket in ap-southeast-2](../../images/5-Workshop/5.5/5-5-02.png)
 
 2. Clear **Block all public access** for this bucket only and confirm the warning.
 
-![Clearing Block all public access](/images/5-Workshop/5.5/5-5-03.png)
+![Clearing Block all public access](../../images/5-Workshop/5.5/5-5-03.png)
 
 3. Keep the default SSE-S3 encryption and select **Create bucket**.
 
-![Default SSE-S3 encryption](/images/5-Workshop/5.5/5-5-04.png)
+![Default SSE-S3 encryption](../../images/5-Workshop/5.5/5-5-04.png)
 
 4. The bucket is created, and the Objects list is empty.
 
-![Newly created bucket with an empty Objects list](/images/5-Workshop/5.5/5-5-05.png)
+![Newly created bucket with an empty Objects list](../../images/5-Workshop/5.5/5-5-05.png)
 
 5. Go to the Upload page to upload the index.html file to the bucket.
 
-![Upload page for index.html](/images/5-Workshop/5.5/5-5-06.png)
+![Upload page for index.html](../../images/5-Workshop/5.5/5-5-06.png)
 
 **Enable static website hosting**
 1. The bucket's Properties tab shows the Region, ARN, and creation date.
 
-![Bucket Properties tab](/images/5-Workshop/5.5/5-5-07.png)
+![Bucket Properties tab](../../images/5-Workshop/5.5/5-5-07.png)
 
 2. The **Static website hosting** section is Disabled. Select **Edit**.
 
-![Static website hosting shown as Disabled](/images/5-Workshop/5.5/5-5-08.png)
+![Static website hosting shown as Disabled](../../images/5-Workshop/5.5/5-5-08.png)
 
 3. Enable static website hosting, select **Host a static website**, and set **Index document** to index.html.
 
