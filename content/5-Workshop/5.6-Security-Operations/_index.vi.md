@@ -1,5 +1,5 @@
 ---
-title: "5.6 Bảo mật và vận hành"
+title: "Bảo mật và vận hành"
 date: 2026-11-24
 weight: 6
 chapter: false
@@ -33,15 +33,15 @@ pre: " <b> 5.6. </b> "
 **Xem log trong CloudWatch**
 1. Vào trang tổng quan CloudWatch, mở mục **Logs** để xem log của Lambda.
 
-*[Hình: Trang tổng quan CloudWatch, mục Logs]*
+![Trang tổng quan CloudWatch, mục Logs](../../images/5-Workshop/5.6/5-6-01.png)
 
 2. Trong danh sách **Log groups**, chọn log group của hàm Lambda do Lambda tự tạo.
 
-*[Hình: Danh sách Log groups]*
+![Danh sách Log groups](../../images/5-Workshop/5.6/5-6-02.png)
 
 3. Trong danh sách **Log streams**, mỗi stream ghi lại các request của hàm kèm thời điểm log gần nhất.
 
-*[Hình: Danh sách Log streams]*
+![Danh sách Log streams](../../images/5-Workshop/5.6/5-6-03.png)
 
 **Kiểm tra:** request thử nghiệm xuất hiện trong log, và cảnh báo Budget đang hoạt động.
 
@@ -58,7 +58,7 @@ pre: " <b> 5.6. </b> "
    - **Default route throttling:** giới hạn áp dụng cho mọi route trong stage. Hiện Burst limit và Rate limit đều ghi "Not configured", nghĩa là chưa giới hạn gì.
    - **Account throttling:** mức trần chung của cả tài khoản trong region (Burst 5000, Rate 10000), dùng chung cho mọi API. Đây là mức hệ thống, không chỉnh tại đây.
 
-*[Hình: Trang Throttling của stage]*
+![Trang Throttling của stage](../../images/5-Workshop/5.6/5-6-04.png)
 
 2. Chọn **Edit** ở mục Default route throttling và đặt:
    - **Rate limit:** 5, số request trung bình tối đa mỗi giây.

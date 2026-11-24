@@ -1,125 +1,145 @@
 ---
-title: "Event 2"
-date: 2024-01-01
-weight: 1
+title: "Sự kiện 2"
+date: 2026-11-24
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+**Tên sự kiện:** AWS Cloud Day and AI Day Hanoi - Watch Party
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+**Thời gian:** 08:00, ngày 29 tháng 9 năm 2026
 
-### Mục Đích Của Sự Kiện
+**Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Đường Hải Triều, Phường Sài Gòn, TP. Hồ Chí Minh
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+**Vai trò:** Người tham dự
 
-### Danh Sách Diễn Giả
+# Báo cáo tổng kết: "AWS CLOUD & AI DAY 2026: HCMC WATCH PARTY"
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+## Mục tiêu sự kiện
 
-### Nội Dung Nổi Bật
+AWS Cloud and AI Day Hanoi là sự kiện kéo dài một ngày, nhằm đưa kiến thức về AWS, công nghệ đám mây và các đổi mới trong AI đến với lập trình viên, chuyên gia CNTT, lãnh đạo doanh nghiệp và những người yêu thích công nghệ.
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+Sự kiện tập trung giúp người tham dự hiểu cách điện toán đám mây và AI được áp dụng vào các thách thức thực tế về kinh doanh và kỹ thuật. Các chủ đề chính gồm Agentic AI, phân tích dữ liệu, di chuyển lên đám mây, giải pháp theo ngành và phát triển ứng dụng hiện đại.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+Sự kiện cũng tạo cơ hội để người tham dự học hỏi từ các chuyên gia AWS, tìm hiểu trải nghiệm thực tế của khách hàng và nắm bắt xu hướng mới trong công nghệ đám mây và AI.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+## Diễn giả
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+* H.E. Jennifer Wicks – Đại sứ Hoa Kỳ tại Việt Nam
+* Dr. Werner Vogels – CTO, Amazon.com
+* Eric Yeo – Tổng Giám đốc quốc gia Malaysia, Việt Nam, Đông Dương, AWS
+* Mai Le – Giám đốc Quản lý Sản phẩm, Katalon
+* Dr. Jens Lottner – Tổng Giám đốc điều hành, Techcombank
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+## Điểm nổi bật
 
-#### Domain-Driven Design (DDD)
+### Agentic AI
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+Một trong những chủ đề lớn của sự kiện là Agentic AI, một hướng phát triển quan trọng của ứng dụng AI.
 
-#### Event-Driven Architecture
+Chủ đề này cho góc nhìn rộng hơn về việc AI có thể vượt ra khỏi tương tác hỏi đáp đơn giản để trở thành một phần của hệ thống, hỗ trợ người dùng thực hiện các tác vụ phức tạp hơn.
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+### Phân tích dữ liệu
 
-#### Compute Evolution
+Sự kiện cũng tập trung vào phân tích dữ liệu và vai trò của dữ liệu trong các ứng dụng đám mây hiện đại.
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+Mình hiểu rằng dữ liệu là nền tảng quan trọng cho AI và các ứng dụng kinh doanh. Tổ chức cần có cách phù hợp để thu thập, xử lý, phân tích và sử dụng dữ liệu trước khi có thể tận dụng hiệu quả công nghệ AI.
 
-#### Amazon Q Developer
+### Di chuyển lên đám mây
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+Một chủ đề quan trọng khác là di chuyển lên đám mây (cloud migration).
 
-### Những Gì Học Được
+Sự kiện cung cấp góc nhìn về cách tổ chức có thể chuyển hạ tầng và ứng dụng hiện có lên đám mây, đồng thời cân nhắc các yếu tố như khả năng mở rộng, chi phí, độ tin cậy và hiện đại hóa.
 
-#### Tư Duy Thiết Kế
+Điều này giúp mình hiểu rằng di chuyển lên đám mây không chỉ là đưa một hệ thống từ máy chủ vật lý sang AWS. Tổ chức còn cần cân nhắc có nên hiện đại hóa ứng dụng trong quá trình di chuyển hay không.
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+### Phát triển ứng dụng hiện đại
 
-#### Kiến Trúc Kỹ Thuật
+Sự kiện cũng giới thiệu các cách tiếp cận hiện đại để phát triển ứng dụng trên nền tảng đám mây.
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+Ứng dụng hiện đại cần được thiết kế với khả năng mở rộng, tính linh hoạt, tính sẵn sàng cao và sử dụng tài nguyên hiệu quả.
 
-#### Chiến Lược Hiện Đại Hóa
+Điều này đặc biệt liên quan đến việc học AWS của mình, vì hiểu những nguyên tắc này giúp đưa ra quyết định tốt hơn khi chọn dịch vụ AWS cho một dự án.
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+### Giải pháp theo ngành
 
-### Ứng Dụng Vào Công Việc
+Sự kiện cũng trình bày góc nhìn từ các tổ chức và doanh nghiệp đang ứng dụng công nghệ đám mây và AI trong môi trường thực tế.
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+Những ví dụ này giúp mình hiểu rằng công nghệ AWS không chỉ dừng ở các thử nghiệm kỹ thuật, mà có thể được áp dụng để giải quyết các bài toán thực tế ở nhiều ngành khác nhau.
 
-### Trải nghiệm trong event
+## Kết luận chính
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+### Đám mây và AI gắn kết với nhau
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+Một trong những điều quan trọng nhất mình rút ra là điện toán đám mây là nền tảng quan trọng cho các ứng dụng AI.
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+Hệ thống AI cần tài nguyên tính toán, lưu trữ dữ liệu, mạng, bảo mật và hạ tầng có khả năng mở rộng. Các nền tảng đám mây như AWS cung cấp những khả năng này và giúp tổ chức xây dựng, triển khai ứng dụng AI hiệu quả hơn.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+### Bắt đầu từ vấn đề kinh doanh
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+Một bài học quan trọng khác là cần hiểu vấn đề kinh doanh trước khi chọn công nghệ.
 
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+Thay vì quyết định ngay dịch vụ AWS nào sẽ dùng, lập trình viên nên tự hỏi:
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+* Vấn đề nào cần được giải quyết?
+* Người dùng là ai?
+* Cần những dữ liệu nào?
+* Hệ thống cần làm được những gì?
+* Có những ràng buộc kỹ thuật và kinh doanh nào?
+
+Chỉ sau khi trả lời các câu hỏi này, mới nên chọn công nghệ đám mây và AI phù hợp.
+
+### Hiện đại hóa không chỉ là di chuyển
+
+Mình cũng nhận ra rằng di chuyển lên đám mây có thể là cơ hội để hiện đại hóa một ứng dụng hiện có, thay vì chỉ chuyển nguyên kiến trúc sang môi trường mới.
+
+Điều này có thể bao gồm việc sử dụng dịch vụ được quản lý, công nghệ serverless, kiến trúc ứng dụng hiện đại và các khả năng AI khi phù hợp.
+
+## Áp dụng vào dự án FCAJ
+
+Kiến thức từ AWS Cloud and AI Day Hanoi có thể được áp dụng trực tiếp vào dự án FCAJ của mình, một trợ lý AI hỗ trợ thông tin pháp lý và bảo mật cho doanh nghiệp.
+
+Sự kiện củng cố quan điểm rằng mình nên bắt đầu bằng việc xác định vấn đề kinh doanh, thay vì chọn dịch vụ AWS trước.
+
+Ví dụ, hệ thống cần cho phép người dùng doanh nghiệp mô tả một tình huống pháp lý hoặc bảo mật và nhận phản hồi do AI tạo ra dựa trên kho kiến thức nội bộ của tổ chức.
+
+Từ yêu cầu đó, mình có thể xác định kiến trúc AWS phù hợp, chẳng hạn:
+
+* Amazon S3 → lưu trữ tài liệu và nguồn kiến thức nội bộ
+* Amazon Bedrock → cung cấp khả năng AI và mô hình nền tảng
+* AWS Lambda → thực thi logic ứng dụng
+* Amazon API Gateway → cung cấp API cho ứng dụng
+* Amazon DynamoDB → lưu trữ dữ liệu ứng dụng và hội thoại
+
+Sự kiện cũng giúp mình nhận ra tầm quan trọng của việc thiết kế hệ thống với yếu tố bảo mật, khả năng mở rộng và sử dụng dữ liệu doanh nghiệp một cách có trách nhiệm, vì dự án liên quan đến thông tin nhạy cảm của tổ chức.
+
+## Trải nghiệm tham dự
+
+### Học hỏi từ các chuyên gia AWS
+
+Sự kiện cho mình cơ hội tìm hiểu các xu hướng mới nhất về đám mây và AI trực tiếp từ các chuyên gia AWS và lãnh đạo ngành.
+
+Việc lắng nghe nhiều diễn giả khác nhau giúp mình hiểu đám mây và AI dưới nhiều góc độ, bao gồm công nghệ, kinh doanh và phát triển sản phẩm.
+
+### Tìm hiểu xu hướng AI hiện nay
+
+Phần thảo luận về Agentic AI đặc biệt thú vị vì nó cho thấy vai trò của AI đang thay đổi.
+
+Thay vì chỉ xem AI như một chatbot hay công cụ hỏi đáp, mình bắt đầu nghĩ nhiều hơn về cách AI có thể trở thành một phần của quy trình ứng dụng lớn hơn.
+
+### Hiểu về việc doanh nghiệp áp dụng điện toán đám mây
+
+Các góc nhìn từ Techcombank và Katalon giúp mình hiểu rằng việc áp dụng đám mây và AI không chỉ là triển khai kỹ thuật.
+
+Tổ chức cũng cần cân nhắc giá trị kinh doanh, bảo mật, khả năng mở rộng, chi phí và tác động đến các hệ thống hiện có.
+
+## Bài học rút ra
+
+Bài học quan trọng nhất mình nhận được từ AWS Cloud and AI Day Hanoi là công nghệ đám mây và AI nên được xem như công cụ để giải quyết vấn đề thực tế, chứ không phải thứ nên dùng chỉ vì nó mới.
+
+Sự kiện khuyến khích mình tiếp cận dự án FCAJ theo hướng thực tế hơn: trước tiên hiểu vấn đề và yêu cầu, sau đó thiết kế kiến trúc và chọn dịch vụ AWS phù hợp.
+
+## Ảnh sự kiện
+
+![Ảnh sự kiện 2, ảnh 1](../../images/4-EventParticipated/4.2-Event2/event2-01.png)

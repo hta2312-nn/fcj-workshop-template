@@ -24,7 +24,7 @@ Hệ thống được xây dựng trên kiến trúc serverless với các thàn
 - **LLM:** Groq API (qwen/qwen3.8-27b), dịch vụ bên ngoài AWS.
 - **Giám sát:** Amazon CloudWatch.
 
-*[Hình: Sơ đồ kiến trúc và luồng dữ liệu]*
+![Sơ đồ kiến trúc và luồng dữ liệu](../images/5-Workshop/_index/_index-01.png)
 
 ### Nội dung
 - 5.1 Giới thiệu

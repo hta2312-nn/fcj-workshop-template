@@ -1,5 +1,5 @@
 ---
-title: "5.5 Frontend: S3 static website"
+title: "Frontend: S3 static website"
 date: 2026-11-24
 weight: 5
 chapter: false
@@ -24,7 +24,7 @@ pre: " <b> 5.5. </b> "
 3. Hiển thị thông báo rõ ràng cho các lỗi 400, 429 và 502/504.
 4. Khuyến nghị: thêm disclaimer cho biết câu trả lời chỉ mang tính sơ bộ, không phải tư vấn pháp lý.
 
-*[Hình: Giao diện khung chat index.html]*
+![Giao diện khung chat index.html](../../images/5-Workshop/5.5/5-5-01.png)
 
 **Kiểm tra:** mở index.html trên máy, thấy trang chat và lời chào.
 
@@ -41,32 +41,32 @@ pre: " <b> 5.5. </b> "
 **Tạo bucket**
 1. Tạo bucket ở region ap-southeast-2, loại General purpose, đặt tên ai-legal-assistant-frontend-hau.
 
-*[Hình: Tạo bucket S3 ở region ap-southeast-2]*
+![Tạo bucket S3 ở region ap-southeast-2](../../images/5-Workshop/5.5/5-5-02.png)
 
 2. Bỏ chọn **Block all public access** cho riêng bucket này và xác nhận cảnh báo.
 
-*[Hình: Bỏ chọn Block all public access]*
+![Bỏ chọn Block all public access](../../images/5-Workshop/5.5/5-5-03.png)
 
 3. Giữ mã hóa mặc định SSE-S3 và chọn **Create bucket**.
 
-*[Hình: Mã hóa mặc định SSE-S3]*
+![Mã hóa mặc định SSE-S3](../../images/5-Workshop/5.5/5-5-04.png)
 
 4. Bucket đã được tạo, danh sách Objects đang trống.
 
-*[Hình: Bucket mới tạo với danh sách Objects trống]*
+![Bucket mới tạo với danh sách Objects trống](../../images/5-Workshop/5.5/5-5-05.png)
 
 5. Vào trang Upload để tải file index.html lên bucket.
 
-*[Hình: Trang Upload file index.html]*
+![Trang Upload file index.html](../../images/5-Workshop/5.5/5-5-06.png)
 
 **Bật static website hosting**
 1. Tab Properties của bucket hiển thị Region, ARN và ngày tạo.
 
-*[Hình: Tab Properties của bucket]*
+![Tab Properties của bucket](../../images/5-Workshop/5.5/5-5-07.png)
 
 2. Mục **Static website hosting** đang ở trạng thái Disabled. Chọn **Edit**.
 
-*[Hình: Mục Static website hosting đang Disabled]*
+![Mục Static website hosting đang Disabled](../../images/5-Workshop/5.5/5-5-08.png)
 
 3. Bật Static website hosting, chọn **Host a static website** và đặt **Index document** là index.html.
 

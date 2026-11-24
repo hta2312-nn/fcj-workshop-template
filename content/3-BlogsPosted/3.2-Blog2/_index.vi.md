@@ -1,31 +1,44 @@
 ---
 title: "Blog 2"
-date: 2024-01-01
-weight: 1
+date: 2026-11-24
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-# SESSION POLICIES TRONG AMAZON EKS POD IDENTITY
+# AWS LEARNING CORNER: NHỮNG ĐIỀU NGƯỜI MỚI CẦN BIẾT ĐỂ KHÔNG BỊ SỐC VÌ HÓA ĐƠN CUỐI THÁNG
 
-Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Một tình huống phổ biến với người mới dùng AWS là bật một tài nguyên thử nghiệm, quên tắt, rồi nhận hóa đơn bất ngờ vào cuối tháng. Kiểm soát chi phí không chỉ giúp bạn yên tâm khi thực hành mà còn là kỹ năng nền tảng khi quản lý hạ tầng cloud.
 
-Các điểm chính cần nắm:
+Dưới đây là các thiết lập và mẹo quan trọng để quản lý ngân sách hiệu quả ngay từ đầu.
 
-* Session policy là một IAM policy inline được chỉ định khi tạo hoặc cập nhật Pod Identity association.
-* Quyền hiệu quả = intersection (giao) giữa permissions của IAM role và session policy → session policy chỉ có thể thu hẹp, không thể mở rộng quyền.
-* Giúp tránh tình trạng over-permissioning khi reuse chung một IAM role cho nhiều workloads có nhu cầu khác nhau.
-* Hỗ trợ cả same-account và cross-account (qua IAM role chaining).
-* Giảm đáng kể số lượng IAM roles cần quản lý, tránh chạm giới hạn quota IAM trong cluster lớn.
-* Cấu hình dễ dàng qua AWS Management Console, AWS CLI hoặc AWS SDK khi tạo association giữa Kubernetes ServiceAccount và IAM role.
+### 1. Thiết lập AWS Budgets và Billing Alerts
+Đây là bước đầu tiên bạn nên làm ngay sau khi tạo tài khoản AWS.
 
-Tính năng này đặc biệt hữu ích khi bạn có nhiều ứng dụng chạy trên cùng một IAM role nhưng cần giới hạn quyền khác nhau (ví dụ: một pod chỉ đọc S3 bucket cụ thể, pod khác chỉ gọi một số API nhất định).
+* **Cách hoạt động:** Đặt một ngưỡng ngân sách an toàn (ví dụ $5 hoặc $10). Khi chi phí thực tế hoặc dự báo vượt ngưỡng này, hệ thống tự động gửi email thông báo.
+* **Lợi ích:** Các tài nguyên chạy ngầm trong thời gian dài sẽ được phát hiện sớm.
 
-...Hình ảnh...
+### 2. Sử dụng AWS Free Tier đúng cách
+Free Tier cung cấp nhiều tài nguyên miễn phí, nhưng mỗi loại đều có điều kiện riêng:
 
-...Link...
+* **Giới hạn thời gian:** Ví dụ, EC2 có 750 giờ mỗi tháng cho các instance t2.micro hoặc t3.micro (tùy Region). Nếu bạn chạy hai instance liên tục, thời gian sử dụng được tính gấp đôi và bạn có thể vượt hạn mức miễn phí rất nhanh.
+* **Giới hạn dung lượng:** S3 và EBS có quy định riêng về dung lượng lưu trữ và số lượng request. Hãy đọc kỹ điều khoản dịch vụ trước khi tạo tài nguyên.
 
-...Hướng dẫn...
+### 3. Dọn dẹp tài nguyên không dùng
+Các tài nguyên nhàn rỗi hoặc tồn tại độc lập thường là nguồn chi phí ẩn:
+
+* **Dừng hoặc xóa EC2 instance:** Tắt các máy chủ thử nghiệm khi không làm việc.
+* **Lưu ý về Elastic IP:** Elastic IP chỉ miễn phí khi được gắn vào một EC2 instance đang chạy. Nếu bạn gỡ ra, hoặc gắn vào instance đang dừng, bạn vẫn bị tính phí duy trì.
+* **EBS volume và snapshot không gắn kết:** Khi xóa EC2 instance, một số EBS volume hoặc snapshot tự động tạo có thể vẫn còn và tiếp tục tính phí lưu trữ.
+
+### 4. Theo dõi chi tiết với AWS Cost Explorer
+
+* **Công cụ trực quan:** AWS Cost Explorer cung cấp biểu đồ phân tích chi phí theo thời gian, theo dịch vụ hoặc theo Tag.
+* **Kiểm tra định kỳ:** Xem báo cáo chi phí một đến hai lần mỗi tuần giúp bạn nhanh chóng phát hiện dịch vụ tiêu tốn ngân sách bất thường.
+
+### Kết luận
+Tối ưu và kiểm soát chi phí là phần không thể thiếu trong tư duy làm việc với Cloud Computing. Thiết lập một môi trường an toàn ngay từ đầu giúp bạn học tập và thử nghiệm dịch vụ AWS mà không lo về hóa đơn.
+
+Bạn có mẹo kiểm soát chi phí nào khác, hoặc câu chuyện đáng nhớ nào về hóa đơn AWS không? Chia sẻ bên dưới phần bình luận nhé.
+
+[Liên kết bài đăng trên AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj/posts/2317495209015438/)

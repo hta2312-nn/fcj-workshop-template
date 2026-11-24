@@ -1,31 +1,27 @@
 ---
 title: "Blog 1"
-date: 2024-01-01
+date: 2026-11-24
 weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# AWS AMPLIFY: AN INTRODUCTION AND WHY IT FITS STUDENT AND PERSONAL PROJECTS
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+Many of us have finished a frontend in no time, only to spend days on the backend, database setup, login features and deployment. AWS Amplify is designed to reduce that overhead so you can focus on the logic of your application instead of the infrastructure beneath it.
 
 Key points to know:
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+* **Authentication:** Amplify integrates Amazon Cognito with a few CLI commands or simple configuration steps. Sign-up, sign-in, password reset and session management are available out of the box.
+* **API and database:** You can create a GraphQL API with AWS AppSync or a REST API with API Gateway and DynamoDB, so reading and writing data from the frontend stays simple.
+* **Hosting and CI/CD:** Amplify connects directly to GitHub or GitLab. Each git push triggers an automatic build and deployment.
+* **Serverless architecture:** There are no servers to maintain, and costs stay low for small projects.
+* **Framework support:** Amplify works well with React, Next.js, Vue, Flutter and React Native.
+* **Best fit:** Demos, course projects and MVPs (minimum viable products).
+* **Limitation:** Deep infrastructure customization, such as a dedicated VPC or complex IAM permissions, takes extra study, because Amplify creates many of these resources automatically and you need to understand them before changing them.
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+AWS Amplify helps you follow a professional cloud workflow while saving time, especially for beginners who want to ship a working product.
 
-...Image...
+![AWS Amplify blog image](../../images/3-BlogsPosted/3.1-Blog1/blog1-01.jpeg)
 
-...Link...
-
-...Guide...
+[Link to the post on AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj/?multi_permalinks=2298180120946947)

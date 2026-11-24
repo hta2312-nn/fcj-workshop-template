@@ -1,5 +1,5 @@
 ---
-title: "5.2 Prerequisites"
+title: "Prerequisites"
 date: 2026-11-24
 weight: 2
 chapter: false
@@ -47,14 +47,14 @@ Lambda needs only two permissions: reading the LegalArticles table and writing l
 
 Also attach the managed policy **AWSLambdaBasicExecutionRole** so Lambda can write logs to CloudWatch.
 
-![alt text](IAM.png)
+![IAM role with the AWSLambdaBasicExecutionRole managed policy](../../images/5-Workshop/5.2/5-2-01.png)
 
 ### Groq account and API key
 **Create an account and open the Groq Console**
 1. Go to console.groq.com and sign in (or create a new account).
 2. After signing in, you will see the Groq Console Dashboard.
 
-![alt text](Groq.png)
+![Groq Dashboard](../../images/5-Workshop/5.2/5-2-02.png)
 
 The dashboard shows token usage for the last 30 days. The Playground, Docs, and Manage Team shortcuts let you test the model, read the documentation, and manage team members.
 
@@ -66,14 +66,14 @@ The dashboard shows token usage for the last 30 days. The Playground, Docs, and 
    - **Expiration:** choose how long the key is valid.
 4. Select **Submit**.
 
-![alt text](GroqKey.png)
-![alt text](CreateAPI.png)
+![API Keys page](../../images/5-Workshop/5.2/5-2-03.png)
+![Create API Key dialog](../../images/5-Workshop/5.2/5-2-04.png)
 
 The system displays the API key in the format `gsk_...`. Select **Copy** to copy it.
 
 > **Note:** the key is shown only once. Save it somewhere secure immediately, because you cannot view it again after closing the window.
 
-*[Image placeholder: Newly created API key]*
+![Newly created API key](../../images/5-Workshop/5.2/5-2-06.png)
 
 Select **Done** to finish.
 
@@ -82,7 +82,7 @@ Select **Done** to finish.
 2. In the model selector at the top, choose the model you need. In this workshop, it is **qwen/qwen3.8-27b**.
 3. Select **View code** (it shows "Hide code" when open) to see sample code that calls the API with the selected model.
 
-![alt text](PlayGround.png)
+![Selecting the model in Playground](../../images/5-Workshop/5.2/5-2-07.png)
 
 ### Resource inventory
 | Resource | Name | Notes |
@@ -100,7 +100,7 @@ Create an AWS Budget with email alerts **before building anything**. The project
 2. In the left menu, select **Budgets**.
 3. Select **Create budget** on the right.
 
-*[Image placeholder: Budgets page, empty list (0 budgets)]*
+![Budgets page, empty list (0 budgets)](../../images/5-Workshop/5.2/5-2-08.png)
 
 **Choose a budget type**
 - **Budget setup:** select **Use a template (simplified)**, which uses the recommended preset configuration. The Customize (advanced) option allows more detailed settings but is not necessary here.
@@ -108,7 +108,7 @@ Create an AWS Budget with email alerts **before building anything**. The project
 - **Billing View** is optional and can be skipped.
 - Scroll to the bottom and select **Next**.
 
-*[Image placeholder: Selecting the Zero spend budget template]*
+![Selecting the Zero spend budget template](../../images/5-Workshop/5.2/5-2-09.png)
 
 **Name the budget and set the alert email**
 - **Budget name:** keep the default or choose a more recognizable name, for example LegalRAG-Zero-Spend.

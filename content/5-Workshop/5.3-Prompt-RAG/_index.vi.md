@@ -1,5 +1,5 @@
 ---
-title: "5.3 Giai đoạn 1: Thiết lập Prompt và cơ chế RAG"
+title: "Giai đoạn 1: Thiết lập Prompt và cơ chế RAG"
 date: 2026-11-24
 weight: 3
 chapter: false
@@ -41,6 +41,6 @@ pre: " <b> 5.3. </b> "
 2. Đặt ngữ cảnh luật trước câu hỏi của người dùng trong message.
 3. Giới hạn số lượng và độ dài điều luật để nằm trong giới hạn rate và token của mô hình.
 
-*[Hình: Cấu trúc prompt gồm system prompt, ngữ cảnh luật và câu hỏi]*
+![Cấu trúc prompt gồm system prompt, ngữ cảnh luật và câu hỏi](../../images/5-Workshop/5.3/5-3-01.png)
 
 **Kiểm tra:** prompt in ra có đủ ba phần, đúng thứ tự.

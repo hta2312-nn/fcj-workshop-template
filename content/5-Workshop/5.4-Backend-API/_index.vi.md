@@ -1,5 +1,5 @@
 ---
-title: "5.4 Giai đoạn 2: Backend, từ Database đến Lambda và API"
+title: "Giai đoạn 2: Backend, từ Database đến Lambda và API"
 date: 2026-11-24
 weight: 4
 chapter: false
@@ -22,7 +22,7 @@ pre: " <b> 5.4. </b> "
 1. Trong AWS Management Console, gõ **DynamoDB** vào ô tìm kiếm rồi nhấn Enter.
 2. Ở menu bên trái, chọn **Tables**, sau đó chọn **Create table**.
 
-*[Hình: Trang Tables và nút Create table]*
+![Trang Tables và nút Create table](../../images/5-Workshop/5.4/5-4-01.png)
 
 **Phần Table details**
 - **Table name:** LegalArticles. Tên dài 3 đến 255 ký tự, chỉ gồm chữ, số, dấu gạch dưới (_), gạch ngang (-) và dấu chấm (.).
@@ -30,14 +30,14 @@ pre: " <b> 5.4. </b> "
 - **Sort key (tùy chọn):** để trống, vì bảng chỉ cần một khóa là id.
 - Giữ cài đặt mặc định và chọn **Create table**.
 
-*[Hình: Phần Table details và cài đặt mặc định]*
+![Phần Table details và cài đặt mặc định](../../images/5-Workshop/5.4/5-4-02.png)
 
 Sau vài giây, bảng LegalArticles chuyển sang trạng thái **Active**. Các bước sau sẽ thêm các điều luật của Nghị định 13/2023/NĐ-CP vào bảng này.
 
 **Chuẩn bị IAM role cho Lambda**
 1. Trong AWS Management Console, gõ **IAM** vào ô tìm kiếm rồi nhấn Enter.
 
-*[Hình: Trang IAM Dashboard]*
+![Trang IAM Dashboard](../../images/5-Workshop/5.4/5-4-03.png)
 
 Mục **Security recommendations** cho thấy tài khoản đã đạt hai khuyến nghị bảo mật: root user đã bật MFA và root user không có access key đang hoạt động. Đây là cách làm đúng: bật MFA cho root và làm việc bằng IAM user.
 
@@ -46,7 +46,7 @@ Mục **IAM resources** thống kê tài nguyên hiện có. Menu bên trái g�
 1. Ở menu bên trái, chọn **Roles**. Trang này hiển thị danh sách các role của tài khoản. Role là một danh tính có các quyền cụ thể, dùng thông tin xác thực ngắn hạn và có thể được các thực thể tin cậy (như Lambda) đảm nhận (assume).
 2. Chọn **Create role** ở góc phải.
 
-*[Hình: Trang danh sách Roles]*
+![Trang danh sách Roles](../../images/5-Workshop/5.4/5-4-04.png)
 
 **Thiết lập role**
 - **Trusted entity type:** chọn AWS service. **Use case:** chọn Lambda.
@@ -58,7 +58,7 @@ Mục **IAM resources** thống kê tài nguyên hiện có. Menu bên trái g�
 
 **Truy xuất điều luật từ DynamoDB (retrieve_legal_context)**
 
-*[Hình: Hàm retrieve_legal_context truy vấn DynamoDB]*
+![Hàm retrieve_legal_context truy vấn DynamoDB](../../images/5-Workshop/5.4/5-4-06.png)
 
 ### 5.4.2 Lập trình hàm AWS Lambda (logic RAG và Groq API)
 **Mục tiêu:** Truy xuất ngữ cảnh luật và sinh câu trả lời trong một hàm Python.
@@ -68,8 +68,8 @@ Mục **IAM resources** thống kê tài nguyên hiện có. Menu bên trái g�
 2. Trang Functions hiển thị danh sách các hàm Lambda trong region hiện tại. Chọn **Create function** ở góc phải.
 3. Ở trang Create function, chọn **Author from scratch**.
 
-*[Hình: Trang Lambda và nút Create function]*
-*[Hình: Chọn Author from scratch]*
+![Trang Lambda và nút Create function](../../images/5-Workshop/5.4/5-4-07.png)
+![Chọn Author from scratch](../../images/5-Workshop/5.4/5-4-08.png)
 
 - **Function name:** legal-ai-chat-lambda. Tên dài 1 đến 64 ký tự, không có khoảng trắng, chỉ gồm chữ, số, gạch ngang (-) và gạch dưới (_).
 - **Runtime:** chọn **Python 3.12**.
@@ -81,25 +81,25 @@ Mục **IAM resources** thống kê tài nguyên hiện có. Menu bên trái g�
 3. Nếu muốn kiểm tra quyền của role, chọn **View role details in IAM**.
 4. Chọn **Save**.
 
-*[Hình: Bật Custom execution role]*
-*[Hình: Chọn legal-ai-chat-role trong panel Configure custom execution role]*
+![Bật Custom execution role](../../images/5-Workshop/5.4/5-4-09.png)
+![Chọn legal-ai-chat-role trong panel Configure custom execution role](../../images/5-Workshop/5.4/5-4-10.png)
 
 Các tùy chọn khác như ARM64 architecture, Function URL, VPC và Durable execution giữ ở trạng thái tắt. Ta sẽ dùng API Gateway thay cho Function URL. Các cài đặt có biểu tượng riêng không thể thêm hoặc bỏ sau khi hàm được tạo. Các cài đặt còn lại có thể đổi sau.
 
 Chọn **Create function**. Thông báo "Successfully created the function" xuất hiện.
 
-*[Hình: Thông báo tạo hàm thành công]*
+![Thông báo tạo hàm thành công](../../images/5-Workshop/5.4/5-4-11.png)
 
 **Lập trình hàm Lambda (lambda_function.py)**
 
-*[Hình: Mã lambda_function.py trong trình soạn thảo của Lambda]*
+![Mã lambda_function.py trong trình soạn thảo của Lambda](../../images/5-Workshop/5.4/5-4-12.png)
 
 **Deploy code lên Lambda**
 1. Sau khi dán code vào lambda_function.py, chọn **Deploy** để lưu và áp dụng code.
 2. Thông báo màu xanh "Successfully updated the function legal-ai-chat-lambda" cho biết code đã được cập nhật. Nếu chưa bấm Deploy, Lambda vẫn chạy code cũ.
 
-*[Hình: Nút Deploy]*
-*[Hình: Thông báo deploy thành công]*
+![Nút Deploy](../../images/5-Workshop/5.4/5-4-13.png)
+![Thông báo deploy thành công](../../images/5-Workshop/5.4/5-4-14.png)
 
 **Thêm biến môi trường GROQ_API_KEY**
 Code đọc key từ biến môi trường GROQ_API_KEY, nên không ghi key trực tiếp trong code.
@@ -111,7 +111,7 @@ Code đọc key từ biến môi trường GROQ_API_KEY, nên không ghi key tr�
 
 Biến GROQ_API_KEY đã được gắn vào hàm. Nếu thiếu biến này, hàm sẽ trả lỗi 500 "Thiếu cấu hình GROQ_API_KEY trên hệ thống", như đã viết trong code.
 
-*[Hình: Biến môi trường GROQ_API_KEY sau khi lưu]*
+![Biến môi trường GROQ_API_KEY sau khi lưu](../../images/5-Workshop/5.4/5-4-15.png)
 
 **Tăng Timeout của hàm**
 1. Ở tab Configuration, chọn **General configuration**, rồi chọn **Edit**.
@@ -120,11 +120,11 @@ Biến GROQ_API_KEY đã được gắn vào hàm. Nếu thiếu biến này, h�
 4. Giữ nguyên Execution role là legal-ai-chat-role và Memory 128 MB là đủ cho bài này.
 5. Kéo xuống cuối trang và chọn **Save**.
 
-*[Hình: Cấu hình Timeout 30 giây]*
+![Cấu hình Timeout 30 giây](../../images/5-Workshop/5.4/5-4-16.png)
 
 **Luồng xử lý bên trong hàm Lambda**
 
-*[Hình: Sơ đồ luồng xử lý bên trong hàm Lambda]*
+![Sơ đồ luồng xử lý bên trong hàm Lambda](../../images/5-Workshop/5.4/5-4-17.png)
 
 ### 5.4.3 Cấu hình API Gateway và chuẩn hóa xử lý lỗi
 **Mục tiêu:** Mở hàm Lambda qua endpoint HTTPS công khai mà trình duyệt được phép gọi.
@@ -144,14 +144,14 @@ Biến GROQ_API_KEY đã được gắn vào hàm. Nếu thiếu biến này, h�
 **Tạo HTTP API**
 1. Trong AWS Management Console, gõ **API Gateway** vào ô tìm kiếm rồi nhấn Enter.
 
-*[Hình: Trang chủ API Gateway]*
+![Trang chủ API Gateway](../../images/5-Workshop/5.4/5-4-18.png)
 
 API Gateway là dịch vụ được quản lý hoàn toàn, giúp tạo, xuất bản, giám sát và bảo mật API ở mọi quy mô. Trong bài này, nó đóng vai trò cổng HTTPS công khai để trang web S3 gọi tới hàm Lambda.
 
 2. Chọn **Create an API** ở khung Get started.
 3. Ở trang Choose an API type, tìm thẻ **HTTP API** và chọn **Build**.
 
-*[Hình: Chọn loại API HTTP API]*
+![Chọn loại API HTTP API](../../images/5-Workshop/5.4/5-4-19.png)
 
 HTTP API có độ trễ thấp, chi phí thấp, hỗ trợ sẵn CORS và tích hợp được với Lambda. Với bài này, HTTP API là đủ và rẻ hơn REST API.
 
@@ -164,8 +164,8 @@ HTTP API có độ trễ thấp, chi phí thấp, hỗ trợ sẵn CORS và tíc
   - **Version:** giữ 2.0 (payload format version 2.0 của HTTP API).
 - Chọn **Next**.
 
-*[Hình: Đặt tên API LegalChatAPI]*
-*[Hình: Thêm tích hợp Lambda]*
+![Đặt tên API LegalChatAPI](../../images/5-Workshop/5.4/5-4-20.png)
+![Thêm tích hợp Lambda](../../images/5-Workshop/5.4/5-4-21.png)
 
 **Bước 2: Configure routes**
 Route gồm hai phần: Method (phương thức HTTP) và Resource path (đường dẫn).
@@ -174,7 +174,7 @@ Route gồm hai phần: Method (phương thức HTTP) và Resource path (đườ
 - **Integration target:** legal-ai-chat-lambda
 - Chọn **Next**.
 
-*[Hình: Cấu hình route]*
+![Cấu hình route](../../images/5-Workshop/5.4/5-4-22.png)
 
 **Bước 3: Define stages**
 Stage là môi trường triển khai của API, ví dụ dev hoặc prod. Mặc định console tạo stage $default với **Auto-deploy** đang bật, nghĩa là mọi thay đổi sẽ tự được triển khai. Giữ mặc định và chọn **Next**.
@@ -186,7 +186,7 @@ Kiểm tra lại toàn bộ cấu hình, sau đó chọn **Create**.
 - Routes: /chat → legal-ai-chat-lambda.
 - Stages: $default (Auto-deploy: enabled).
 
-*[Hình: Màn hình Review trước khi tạo API]*
+![Màn hình Review trước khi tạo API](../../images/5-Workshop/5.4/5-4-23.png)
 
 Khi tạo xong, thông báo "Successfully created API LegalChatAPI" xuất hiện.
 
@@ -200,7 +200,7 @@ CORS cho phép trang web ở một domain (website S3) gọi API ở domain khá
    - **Access-Control-Max-Age:** để 0. **Allow-Credentials:** để NO.
 3. Chọn **Save**.
 
-*[Hình: Cấu hình CORS]*
+![Cấu hình CORS](../../images/5-Workshop/5.4/5-4-24.png)
 
 **Tạo stage và deploy**
 1. Chọn **Deploy**, sau đó tạo stage **v1**.
@@ -208,7 +208,7 @@ CORS cho phép trang web ở một domain (website S3) gọi API ở domain khá
 3. Automatic Deployment của stage v1 đang **Disabled**, nên mỗi lần sửa cấu hình phải bấm Deploy thủ công.
 4. Chọn **Deploy** và chọn stage v1.
 
-*[Hình: Deploy stage v1]*
+![Deploy stage v1](../../images/5-Workshop/5.4/5-4-25.png)
 
 Thông báo "Successfully created deployment for LegalChatAPI" cho biết API đã được triển khai. URL đầy đủ để gọi hàm là:
 

@@ -24,7 +24,7 @@ The system is built on a serverless architecture with the following components:
 - **LLM:** Groq API (qwen/qwen3.8-27b), an external service outside AWS.
 - **Monitoring:** Amazon CloudWatch.
 
-*[Image placeholder: Architecture diagram and data flow]*
+![Architecture diagram and data flow](../images/5-Workshop/_index/_index-01.png)
 
 ### Contents
 - 5.1 Introduction
