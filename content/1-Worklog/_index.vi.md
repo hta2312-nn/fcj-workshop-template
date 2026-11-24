@@ -1,14 +1,14 @@
 ---
 title: "Worklog"
-date: 2026-12-06
+date: 2026-11-24
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-Trang Worklog này ghi lại hành trình thực tập kéo dài 12 tuần (từ ngày 14/09/2026 đến ngày 04/12/2026) của tôi tại **First Cloud AI Journey (FCAJ)**. Trong suốt chương trình, tôi đã đi từ việc nắm vững các kiến thức nền tảng về AWS và kiến trúc serverless cho đến thiết kế, triển khai, gia cố bảo mật và hoàn thiện tài liệu cho dự án cuối kỳ: **AI Legal & Security Assistant cho Nghị định 13/2023/NĐ-CP**.
+Trang Worklog này ghi lại hành trình thực tập kéo dài 11 tuần (từ ngày 14/09/2026 đến ngày 29/11/2026) của tôi tại **First Cloud AI Journey (FCAJ)**. Trong suốt chương trình, tôi đã đi từ việc nắm vững các kiến thức nền tảng về AWS và kiến trúc serverless cho đến thiết kế, triển khai, gia cố bảo mật và hoàn thiện tài liệu cho dự án cuối kỳ: **AI Legal & Security Assistant cho Nghị định 13/2023/NĐ-CP**.
 
-Trong 12 tuần thực tập, tôi kết hợp giữa tự học qua tài liệu chính thức của AWS và AWS Study Group, thực hành lab, tham dự các sự kiện cộng đồng, viết blog kỹ thuật cũng như rà soát dự án cùng mentor và đồng đội. Dưới đây là tóm tắt nội dung công việc theo từng tuần:
+Trong 11 tuần thực tập, tôi kết hợp giữa tự học qua tài liệu chính thức của AWS và AWS Study Group, thực hành lab, tham dự các sự kiện cộng đồng, viết blog kỹ thuật cũng như rà soát dự án cùng mentor và đồng đội. Dưới đây là tóm tắt nội dung công việc theo từng tuần:
 
 **Tuần 1:** [Làm quen với FCAJ, tìm hiểu kiến thức nền tảng AWS, thiết lập tài khoản, AWS Budgets và AWS Support](1.1-week1/)
 
@@ -30,6 +30,4 @@ Trong 12 tuần thực tập, tôi kết hợp giữa tự học qua tài liệu
 
 **Tuần 10:** [Xây dựng và triển khai giao diện chat frontend trên Amazon S3, kiểm thử toàn trình kèm video demo, viết Workshop và dọn dẹp toàn bộ tài nguyên](1.10-week10/)
 
-**Tuần 11:** [Hoàn thiện Proposal và Workshop với bảng dự toán Pricing Calculator cùng đối chiếu Well-Architected, xuất bản hai bài blog kỹ thuật](1.11-week11/)
-
-**Tuần 12:** [Nghiên cứu các hướng cải tiến bảo mật và truy xuất (Parameter Store, Cognito, Amazon Bedrock), xuất bản bài blog thứ ba, hoàn thành video demo, Self-Assessment và nộp toàn bộ sản phẩm thực tập](1.12-week12/)
+**Tuần 11:** [Hoàn thiện Proposal và Workshop với bảng dự toán Pricing Calculator, đối chiếu Well-Architected và định hướng phát triển, xuất bản 3 bài blog kỹ thuật, hoàn thành video demo, Self-Assessment và nộp toàn bộ sản phẩm thực tập](1.11-week11/)

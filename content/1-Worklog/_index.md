@@ -1,14 +1,14 @@
 ---
 title: "Worklog"
-date: 2026-12-06
+date: 2026-11-24
 weight: 1
 chapter: false
 pre: " <b> 1. </b> "
 ---
 
-This worklog documents my 12-week internship journey (from September 14, 2026 to December 4, 2026) at **First Cloud AI Journey (FCAJ)**. Throughout the program, I progressed from mastering core AWS cloud fundamentals and serverless architecture to designing, building, hardening, and documenting an end-to-end serverless project: **AI Legal & Security Assistant for Decree 13/2023/ND-CP**.
+This worklog documents my 11-week internship journey (from September 14, 2026 to November 29, 2026) at **First Cloud AI Journey (FCAJ)**. Throughout the program, I progressed from mastering core AWS cloud fundamentals and serverless architecture to designing, building, hardening, and documenting an end-to-end serverless project: **AI Legal & Security Assistant for Decree 13/2023/ND-CP**.
 
-Over the 12 weeks, I combined self-study via AWS documentation and AWS Study Group resources, hands-on labs, community tech events, technical blogging, and iterative project reviews with mentors and peers. Below is the weekly summary of my progress:
+Over the 11 weeks, I combined self-study via AWS documentation and AWS Study Group resources, hands-on labs, community tech events, technical blogging, and iterative project reviews with mentors and peers. Below is the weekly summary of my progress:
 
 **Week 1:** [Getting acquainted with FCAJ, AWS fundamentals, account setup, AWS Budgets, and AWS Support](1.1-week1/)
 
@@ -30,6 +30,4 @@ Over the 12 weeks, I combined self-study via AWS documentation and AWS Study Gro
 
 **Week 10:** [Building and deploying the chat frontend on Amazon S3, running end-to-end tests with a demo video, drafting the Workshop, and cleaning up all resources](1.10-week10/)
 
-**Week 11:** [Finalizing the Proposal and Workshop with Pricing Calculator estimates and Well-Architected mapping, and publishing two technical blog posts](1.11-week11/)
-
-**Week 12:** [Researching future security and retrieval improvements (Parameter Store, Cognito, Amazon Bedrock), publishing the third blog post, completing the final demo, Self-Assessment, and submitting all deliverables](1.12-week12/)
+**Week 11:** [Finalizing the Proposal and Workshop with Pricing Calculator estimates, Well-Architected mapping, and future-work research, publishing three technical blog posts, completing the final demo and Self-Assessment, and submitting all deliverables](1.11-week11/)
