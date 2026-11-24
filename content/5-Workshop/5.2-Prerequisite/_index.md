@@ -47,14 +47,14 @@ Lambda needs only two permissions: reading the LegalArticles table and writing l
 
 Also attach the managed policy **AWSLambdaBasicExecutionRole** so Lambda can write logs to CloudWatch.
 
-*[Image placeholder: IAM role with the AWSLambdaBasicExecutionRole managed policy]*
+![alt text](IAM.png)
 
 ### Groq account and API key
 **Create an account and open the Groq Console**
 1. Go to console.groq.com and sign in (or create a new account).
 2. After signing in, you will see the Groq Console Dashboard.
 
-*[Image placeholder: Groq Dashboard]*
+![alt text](Groq.png)
 
 The dashboard shows token usage for the last 30 days. The Playground, Docs, and Manage Team shortcuts let you test the model, read the documentation, and manage team members.
 
@@ -66,8 +66,8 @@ The dashboard shows token usage for the last 30 days. The Playground, Docs, and 
    - **Expiration:** choose how long the key is valid.
 4. Select **Submit**.
 
-*[Image placeholder: API Keys page]*
-*[Image placeholder: Create API Key dialog]*
+![alt text](GroqKey.png)
+![alt text](CreateAPI.png)
 
 The system displays the API key in the format `gsk_...`. Select **Copy** to copy it.
 
@@ -82,7 +82,7 @@ Select **Done** to finish.
 2. In the model selector at the top, choose the model you need. In this workshop, it is **qwen/qwen3.8-27b**.
 3. Select **View code** (it shows "Hide code" when open) to see sample code that calls the API with the selected model.
 
-*[Image placeholder: Selecting the model in Playground]*
+![alt text](PlayGround.png)
 
 ### Resource inventory
 | Resource | Name | Notes |
