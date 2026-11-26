@@ -6,14 +6,6 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-**Event name:** Talkshow "The Thinking Behind Building The Bot"
-
-**Date & Time:** 09:00, September 26, 2026
-
-**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
-
-**Role:** Attendee
-
 # Summary Report: “ The Thinking Behind Building The Bot”
 
 ## Event Objectives
