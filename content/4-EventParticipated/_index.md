@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-This section lists and summarizes the events I have participated in. For example:
+
 
 ### [Event 1 - Talkshow "The Thinking Behind Building The Bot"](4.1-Event1/)
 A talkshow on AI Agents and AI-powered applications, focusing on how developers think about real-world problems before building an AI bot. Speakers came from FCAJ and CMC Global. The event helped me shift my approach from simply "using AI" to designing a complete AI solution around a specific problem.
