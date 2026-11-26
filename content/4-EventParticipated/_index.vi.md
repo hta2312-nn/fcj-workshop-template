@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-Mục này liệt kê và tóm tắt các sự kiện mình đã tham gia. Ví dụ:
+
 
 ### [Sự kiện 1 - Talkshow "The Thinking Behind Building The Bot"](4.1-Event1/)
 Một talkshow về AI Agent và các ứng dụng sử dụng AI, tập trung vào cách lập trình viên suy nghĩ về các bài toán thực tế trước khi xây dựng bot AI. Diễn giả đến từ FCAJ và CMC Global. Sự kiện giúp mình chuyển cách tiếp cận từ đơn thuần "sử dụng AI" sang thiết kế một giải pháp AI hoàn chỉnh xoay quanh một vấn đề cụ thể.
