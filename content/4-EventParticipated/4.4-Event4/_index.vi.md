@@ -6,13 +6,7 @@ chapter: false
 pre: " <b> 4.4. </b> "
 ---
 
-**Tên sự kiện:** FCAJ Community Day
 
-**Thời gian:** 08:30, ngày 31 tháng 10 năm 2026
-
-**Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Đường Hải Triều, Phường Sài Gòn, TP. Hồ Chí Minh
-
-**Vai trò:** Người tham dự
 
 # Báo cáo tổng kết: "Kiến trúc đám mây AWS, Software Factory và phát triển sự nghiệp"
 
