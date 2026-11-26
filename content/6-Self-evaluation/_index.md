@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-During my internship in the First Cloud AI Journey (FCAJ) program from 14/09/2026 to 10/12/2026, I had the opportunity to learn, practice, and apply the knowledge gained at school to a real-world working environment.
+During my internship in the First Cloud AI Journey (FCAJ) program from 14/09/2026 to 14/12/2026, I had the opportunity to learn, practice, and apply the knowledge gained at school to a real-world working environment.
 
 I participated in AWS learning activities, team discussions, event sessions, and project development. Through these activities, I improved my skills in AWS cloud computing, AI application design, research, reporting, communication, teamwork, and problem-solving.
 
