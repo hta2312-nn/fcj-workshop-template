@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 6. </b> "
 ---
 
-Trong thời gian tham gia chương trình First Cloud AI Journey (FCAJ) từ ngày 14/09/2026 đến ngày 10/12/2026, mình có cơ hội học hỏi, thực hành và áp dụng kiến thức đã học ở trường vào môi trường làm việc thực tế.
+Trong thời gian tham gia chương trình First Cloud AI Journey (FCAJ) từ ngày 14/09/2026 đến ngày 14/12/2026, mình có cơ hội học hỏi, thực hành và áp dụng kiến thức đã học ở trường vào môi trường làm việc thực tế.
 
 Mình tham gia các hoạt động học AWS, thảo luận nhóm, các buổi sự kiện và phát triển dự án. Qua đó, mình nâng cao kỹ năng về điện toán đám mây AWS, thiết kế ứng dụng AI, nghiên cứu, báo cáo, giao tiếp, làm việc nhóm và giải quyết vấn đề.
 
