@@ -1,47 +1,45 @@
 ---
-title: "Sharing and Feedback"
-date: 2024-01-01
+title: "Chia sẻ và góp ý"
+date: 2026-11-26
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+> Mình chia sẻ ý kiến cá nhân về chương trình First Cloud AI Journey (FCAJ), để đội ngũ có thể cải thiện ở các mặt sau.
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+### Đánh giá tổng quan
 
-### Overall Evaluation
+**1. Môi trường làm việc**
+Môi trường thân thiện và cởi mở. Các thành viên sẵn sàng giúp đỡ khi mình gặp khó khăn, và việc đặt câu hỏi rất dễ dàng.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+**2. Hỗ trợ từ mentor và đội ngũ**
+Mentor giải thích rõ ràng và khuyến khích mình đặt câu hỏi. Mình đặc biệt trân trọng việc mentor để mình tự thử giải quyết vấn đề trước khi đưa ra đáp án.
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+**3. Mức độ liên quan đến ngành học**
+Công việc gắn khá chặt với kiến thức đã học ở trường, đồng thời giúp mình làm quen với những lĩnh vực mới như kiến trúc AWS và ứng dụng AI.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+**4. Học tập và phát triển kỹ năng**
+Mình học được các dịch vụ AWS qua thực hành, cách thiết kế và ghi chép một dự án, cũng như cách báo cáo tiến độ rõ ràng. Các sự kiện và workshop giúp mình hiểu xu hướng của ngành.
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+**5. Tinh thần đội nhóm**
+Mọi người làm việc nghiêm túc và hỗ trợ nhau. Mình cảm thấy mình là một thành viên thực sự của nhóm, không chỉ là thực tập sinh.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
-
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+**6. Cấu trúc chương trình**
+Worklog hằng tuần, workshop và sự kiện tạo nên lộ trình rõ ràng, giúp mình theo dõi tiến độ của bản thân.
 
 ---
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+### Câu hỏi thêm
+
+- **Phần hài lòng nhất:** Xây dựng một dự án thực tế từ thiết kế đến triển khai, và thấy nó hoạt động.
+- **Chương trình có thể cải thiện:** Sớm được truy cập môi trường AWS hơn và có thêm thời gian thực hành.
+- **Có giới thiệu cho bạn bè không?** Có. Đây là nơi tốt để học kỹ năng cloud qua công việc thực tế, nhất là với sinh viên muốn có kinh nghiệm thực hành.
 
 ---
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+### Góp ý và mong muốn
+
+- **Góp ý:** Thêm các bài lab thực hành có mốc kiểm tra rõ ràng, và chia sẻ thêm ví dụ từ dự án của các khóa trước.
+- **Có tiếp tục trong tương lai không?** Có. Mình muốn tiếp tục và đóng góp cho chương trình.
+- **Ý kiến khác:** Cảm ơn các mentor và đội ngũ FCAJ đã hỗ trợ trong suốt chương trình.
