@@ -6,14 +6,6 @@ chapter: false
 pre: " <b> 4.4. </b> "
 ---
 
-**Event name:** FCAJ Community Day
-
-**Date & Time:** 08:30, October 31, 2026
-
-**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City
-
-**Role:** Attendee
-
 # Summary Report: “AWS Cloud Architecture, Software Factories, and Career Growth”
 
 ## Event Objectives
