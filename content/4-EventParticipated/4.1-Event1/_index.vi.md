@@ -6,13 +6,7 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-**Tên sự kiện:** Talkshow "The Thinking Behind Building The Bot"
 
-**Thời gian:** 09:00, ngày 26 tháng 9 năm 2026
-
-**Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Đường Hải Triều, Phường Sài Gòn, TP. Hồ Chí Minh
-
-**Vai trò:** Người tham dự
 
 # Báo cáo tổng kết: "Tư duy đằng sau việc xây dựng một chatbot"
 
