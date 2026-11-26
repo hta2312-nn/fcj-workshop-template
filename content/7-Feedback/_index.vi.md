@@ -1,44 +1,45 @@
 ---
-title: "Chia sẻ, đóng góp ý kiến"
-date: 2024-01-01
+title: "Chia sẻ và góp ý"
+date: 2026-11-26
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
->Tại đây bạn có thể tự do đóng góp ý kiến cá nhân về những trải nghiệm khi tham gia chương trình First Cloud AI Journey, giúp team FCAJ cải thiện những vấn đề còn thiếu sót dựa trên các hạng mục sau:
+> Mình chia sẻ ý kiến cá nhân về chương trình First Cloud AI Journey (FCAJ), để đội ngũ có thể cải thiện ở các mặt sau.
 
-### Đánh giá chung
+### Đánh giá tổng quan
 
-**1. Môi trường làm việc**  
-Môi trường làm việc rất thân thiện và cởi mở. Các thành viên trong FCAJ luôn sẵn sàng hỗ trợ khi mình gặp khó khăn, kể cả ngoài giờ làm việc. Không gian làm việc gọn gàng, thoải mái, giúp mình tập trung tốt hơn. Tuy nhiên, mình nghĩ có thể bổ sung thêm một số buổi giao lưu hoặc team bonding để mọi người hiểu nhau hơn.
+**1. Môi trường làm việc**
+Môi trường thân thiện và cởi mở. Các thành viên sẵn sàng giúp đỡ khi mình gặp khó khăn, và việc đặt câu hỏi rất dễ dàng.
 
-**2. Sự hỗ trợ của mentor / team admin**  
-Mentor hướng dẫn rất chi tiết, giải thích rõ ràng khi mình chưa hiểu và luôn khuyến khích mình đặt câu hỏi. Team admin hỗ trợ các thủ tục, tài liệu và tạo điều kiện để mình làm việc thuận lợi. Mình đánh giá cao việc mentor cho phép mình thử và tự xử lý vấn đề thay vì chỉ đưa đáp án.
+**2. Hỗ trợ từ mentor và đội ngũ**
+Mentor giải thích rõ ràng và khuyến khích mình đặt câu hỏi. Mình đặc biệt trân trọng việc mentor để mình tự thử giải quyết vấn đề trước khi đưa ra đáp án.
 
-**3. Sự phù hợp giữa công việc và chuyên ngành học**  
-Công việc mình được giao phù hợp với kiến thức mình đã học ở trường, đồng thời mở rộng thêm những mảng mới mà mình chưa từng được tiếp cận. Nhờ vậy, mình vừa củng cố kiến thức nền tảng, vừa học thêm kỹ năng thực tế.
+**3. Mức độ liên quan đến ngành học**
+Công việc gắn khá chặt với kiến thức đã học ở trường, đồng thời giúp mình làm quen với những lĩnh vực mới như kiến trúc AWS và ứng dụng AI.
 
-**4. Cơ hội học hỏi & phát triển kỹ năng**  
-Trong quá trình thực tập, mình học được nhiều kỹ năng mới như sử dụng công cụ quản lý dự án, kỹ năng làm việc nhóm, và cả cách giao tiếp chuyên nghiệp trong môi trường công ty. Mentor cũng chia sẻ nhiều kinh nghiệm thực tế giúp mình định hướng tốt hơn cho sự nghiệp.
+**4. Học tập và phát triển kỹ năng**
+Mình học được các dịch vụ AWS qua thực hành, cách thiết kế và ghi chép một dự án, cũng như cách báo cáo tiến độ rõ ràng. Các sự kiện và workshop giúp mình hiểu xu hướng của ngành.
 
-**5. Văn hóa & tinh thần đồng đội**  
-Văn hóa công ty rất tích cực: mọi người tôn trọng lẫn nhau, làm việc nghiêm túc nhưng vẫn vui vẻ. Khi có dự án gấp, mọi người cùng nhau cố gắng, hỗ trợ không phân biệt vị trí. Điều này giúp mình cảm thấy mình là một phần của tập thể, dù chỉ là thực tập sinh.
+**5. Tinh thần đội nhóm**
+Mọi người làm việc nghiêm túc và hỗ trợ nhau. Mình cảm thấy mình là một thành viên thực sự của nhóm, không chỉ là thực tập sinh.
 
-**6. Chính sách / phúc lợi cho thực tập sinh**  
-Công ty có hỗ trợ phụ cấp thực tập và tạo điều kiện về thời gian linh hoạt khi cần thiết. Ngoài ra, việc được tham gia các buổi đào tạo nội bộ là một điểm cộng lớn.
+**6. Cấu trúc chương trình**
+Worklog hằng tuần, workshop và sự kiện tạo nên lộ trình rõ ràng, giúp mình theo dõi tiến độ của bản thân.
 
+---
 
-### Một số câu hỏi khác
-- Điều bạn **hài lòng nhất** trong thời gian thực tập?  
-- Điều bạn nghĩ công ty **cần cải thiện** cho các thực tập sinh sau?  
-- Nếu giới thiệu cho bạn bè, bạn có **khuyên họ thực tập ở đây không**? Vì sao?  
+### Câu hỏi thêm
 
+- **Phần hài lòng nhất:** Xây dựng một dự án thực tế từ thiết kế đến triển khai, và thấy nó hoạt động.
+- **Chương trình có thể cải thiện:** Sớm được truy cập môi trường AWS hơn và có thêm thời gian thực hành.
+- **Có giới thiệu cho bạn bè không?** Có. Đây là nơi tốt để học kỹ năng cloud qua công việc thực tế, nhất là với sinh viên muốn có kinh nghiệm thực hành.
 
-### Đề xuất & mong muốn
-- Bạn có đề xuất gì để cải thiện trải nghiệm trong kỳ thực tập?  
-- Bạn có muốn tiếp tục chương trình này trong tương lai?
-- Góp ý khác (tự do chia sẻ):
+---
+
+### Góp ý và mong muốn
+
+- **Góp ý:** Thêm các bài lab thực hành có mốc kiểm tra rõ ràng, và chia sẻ thêm ví dụ từ dự án của các khóa trước.
+- **Có tiếp tục trong tương lai không?** Có. Mình muốn tiếp tục và đóng góp cho chương trình.
+- **Ý kiến khác:** Cảm ơn các mentor và đội ngũ FCAJ đã hỗ trợ trong suốt chương trình.
